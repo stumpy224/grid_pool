@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"font",
+				"font-size"
+			],
+			[
 				"make",
 				"makeAllNavLinksInactive"
 			]
@@ -31,23 +35,7 @@
 			"file": "app/assets/javascripts/application.js",
 			"settings":
 			{
-				"buffer_size": 699,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/pages/faq.html.erb",
-			"settings":
-			{
-				"buffer_size": 7268,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/layouts/application.html.erb",
-			"settings":
-			{
-				"buffer_size": 339,
+				"buffer_size": 1874,
 				"line_ending": "Unix"
 			}
 		},
@@ -55,23 +43,7 @@
 			"file": "app/views/layouts/_header.html.erb",
 			"settings":
 			{
-				"buffer_size": 982,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config/routes.rb",
-			"settings":
-			{
-				"buffer_size": 1831,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/pages_controller.rb",
-			"settings":
-			{
-				"buffer_size": 2280,
+				"buffer_size": 952,
 				"line_ending": "Unix"
 			}
 		}
@@ -147,13 +119,28 @@
 		"/home/stumpy/Development/Projects/grid_pool/app/assets/javascripts",
 		"/home/stumpy/Development/Projects/grid_pool/app/assets/stylesheets",
 		"/home/stumpy/Development/Projects/grid_pool/app/controllers",
+		"/home/stumpy/Development/Projects/grid_pool/app/models",
 		"/home/stumpy/Development/Projects/grid_pool/app/views",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/layouts",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages",
-		"/home/stumpy/Development/Projects/grid_pool/config"
+		"/home/stumpy/Development/Projects/grid_pool/config",
+		"/home/stumpy/Development/Projects/grid_pool/db",
+		"/home/stumpy/Development/Projects/grid_pool/db/migrate"
 	],
 	"file_history":
 	[
+		"/home/stumpy/Development/Projects/grid_pool/app/models/participant.rb",
+		"/home/stumpy/Development/Projects/grid_pool/app/models/square.rb",
+		"/home/stumpy/Development/Projects/grid_pool/app/models/year.rb",
+		"/home/stumpy/Development/Projects/grid_pool/app/models/result.rb",
+		"/home/stumpy/Development/Projects/grid_pool/app/models/region.rb",
+		"/home/stumpy/Development/Projects/grid_pool/app/models/payout.rb",
+		"/home/stumpy/Development/Projects/grid_pool/app/models/participant_square.rb",
+		"/home/stumpy/Development/Projects/grid_pool/app/controllers/pages_controller.rb",
+		"/home/stumpy/Development/Projects/grid_pool/config/routes.rb",
+		"/home/stumpy/Development/Projects/grid_pool/db/migrate/20150211032629_create_participants.rb",
+		"/home/stumpy/Development/Projects/grid_pool/app/views/layouts/application.html.erb",
+		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/faq.html.erb",
 		"/home/stumpy/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/stumpy/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
 		"/home/stumpy/Development/Projects/grid_pool/README.md",
@@ -236,7 +223,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -258,13 +245,15 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 442.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -292,7 +281,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -301,102 +290,45 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 699,
+						"buffer_size": 1874,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								698,
-								698
+								1182,
+								1182
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/views/pages/faq.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7268,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								125,
-								125
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/layouts/application.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 339,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								273,
-								273
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 447.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 3,
 					"file": "app/views/layouts/_header.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 982,
+						"buffer_size": 952,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								520,
-								520
+								537,
+								537
 							]
 						],
 						"settings":
@@ -411,66 +343,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "config/routes.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1831,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								259,
-								259
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/controllers/pages_controller.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2280,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								274,
-								274
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
 					"type": "text"
 				}
 			]
