@@ -1,0 +1,7 @@
+#grid_table th, td {
+  text-align: center;
+}
+.gridLoserDigitsColumn {
+  font-weight: bold;
+  vertical-align: middle !important;
+}

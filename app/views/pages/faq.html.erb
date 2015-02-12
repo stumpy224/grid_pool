@@ -1,6 +1,7 @@
+<% provide(:title, 'FAQ') %>
 <div class="panel panel-default">
 	<div class="panel-heading">
-		<h3 class="panel-title" align="center" style="font-size:2em;">Grid</h3>
+		<h3 class="panel-title" align="center" style="font-size:2em;">FAQ</h3>
 	</div>
 	<div class="panel-body">
 		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -43,36 +44,44 @@
 				<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 					<div class="panel-body">
 						After a game is over, the winner of the game is determined by finding the column with the LAST digit of the winner's score, and the row with the LAST digit of the loser's score.  The name found in the square is the winner.  For example, let's say I have the square for winner=7 and loser=5, and Purdue beats Indiana 8<b><u>7</u></b> to 7<b><u>5</u></b>.  I would be considered the winner for that game.
-						<table class="table col-lg-5">
-							<thead>
-								<tr>
-									<th>&nbsp;</th>
-									<th>0</th>
-									<th>7</th>
-									<th>8</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>2</td>
-									<td>&nbsp;</td>
-									<td>&nbsp;</td>
-									<td>&nbsp;</td>
-								</tr>
-								<tr>
-									<td>5</td>
-									<td>&nbsp;</td>
-									<td style='background-color:whitesmoke;'><b>Winner</b></td>
-									<td>&nbsp;</td>
-								</tr>
-								<tr>
-									<td>9</td>
-									<td>&nbsp;</td>
-									<td>&nbsp;</td>
-									<td>&nbsp;</td>
-								</tr>
-							</tbody>
-						</table>
+						<div class="container" style="padding-top:2em;">
+   <div class="row">
+     <div class="col-md-4">
+						<div class="table-responsive">
+							<table id="faq_table" class="table table-bordered responsive-utilities">
+								<thead>
+									<tr>
+										<th>&nbsp;</th>
+										<th>0</th>
+										<th>7</th>
+										<th>8</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>9</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>&nbsp;</td>
+										<td style="background-color:whitesmoke;"><b>Winner</b></td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						</div>
+						</div>
+						</div>
 					</div>
 				</div>
 			</div>

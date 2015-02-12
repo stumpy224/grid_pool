@@ -13,11 +13,7 @@ class PagesController < ApplicationController
   end
 
   def results
-    if params[:year].present?
-      $year = params[:year]
-    else
-      $year = get_latest_year
-    end
+    set_global_year
 
     @sql =  "SELECT DISTINCT pa.id, "\
               "CASE "\
@@ -53,6 +49,8 @@ class PagesController < ApplicationController
   end
 
   def grid
+    set_global_year
+
     @squares = Square.order(winner_digit: :asc, loser_digit: :asc)
     @participant_squares = ParticipantSquare.select(:participant_id).where(year: $year)
     @participants = Participant.all
@@ -62,6 +60,14 @@ class PagesController < ApplicationController
   end
 
   private
+
+    def set_global_year
+      if params[:year].present?
+        $year = params[:year]
+      else
+        $year = get_latest_year
+      end
+    end
 
     def get_tourney_games
       tourney_games = get_tourney_info

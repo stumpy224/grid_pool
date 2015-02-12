@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :results
+  
   root 'pages#results'
   get 'bracket', to: 'pages#bracket'
   get 'grid', to: 'pages#grid'
