@@ -1,0 +1,8 @@
+<tr>
+  <% totalPaid = @participant_squares.where(participant_id: participant.id).count * 5 %>
+  <td style="text-align:left;"><%= participant.preferred_name %></td>
+  <td />
+  <td>$<%= totalPaid %></td>
+  <td>$0</td>
+  <td style='font-weight:bold;color:red;'>$-<%= totalPaid %></td>
+</tr>

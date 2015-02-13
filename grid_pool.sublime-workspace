@@ -31,26 +31,61 @@
 			"file": "app/views/pages/grid.html.erb",
 			"settings":
 			{
-				"buffer_size": 2791,
+				"buffer_size": 2758,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/assets/stylesheets/application.css.scss",
+			"contents": "<% provide(:title, 'Results') %>\n<div align='center' id='resultsPage'>\n  <div class=\"panel panel-default\">\n    <div class=\"panel-heading\" style=\"font-size:2em;\"><%= $year %> Results</div>\n    <div class=\"panel-body\">\n      <% if @payouts.exists? %>\n        <% if @participants_with_squares.any? %>\n          <% if @results.count < 63 %>\n          <div>\n            <% last_updated_at = @years.find_by(year: $year).results_last_updated_at %>\n            <% if !last_updated_at.blank? %>\n            <%= last_updated_at.strftime('Last updated: %m/%d/%Y at %I:%M %p') %>\n            <% end %>\n          </div>\n          <div style='padding-top: 10px;'>\n            <%= link_to 'Refresh', path, id: 'refreshResultsLink', remote: true, class: 'btn btn-primary' %>\n          </div>\n          <div class=\"table-responsive\">\n            <table class=\"table table-condensed table-hover\">\n              <thead>\n                <tr>\n                  <th>Name</th>\n                  <th>Round</th>\n                  <th>$ Paid</th>\n                  <th>$ Won</th>\n                  <th>Profit</th>\n                </tr>\n              </thead>\n              <tbody>\n                <% pCounter = 0 %>\n                <% @participants_with_squares.each do |p_w_sq| %>\n                <% participant = @participants.find(p_w_sq.id) %>\n                <% pResultCount = @results.where(participant_id: participant.id).count %>\n                <% pCounter += 1 %>\n                <% if pResultCount > 0 %>\n                <%= render partial: 'participantWithResults', locals: { participant: participant } %>\n                <% else %>\n                <%= render partial: 'participantWithNoResults', locals: { counter: pCounter, participant: participant } %>\n                <% end %>\n                <% end %>\n              </tbody>\n            </table>\n          </div>\n          <p><a class='scrollToTop' href=''>return to top</a></p>\n          <% else %>\n          <div style='font-weight:bold;'>Please enter participants for the year.</div>\n          <% end %>\n          <% if Year.many? %>\n          <div>Looking for results from a different year?</div>\n          <br />\n          <div>\n            <a data-dropdown='drop' class='button radius btn-default btn-primary tiny dropdown'>Year</a><br>\n            <ul id='drop' data-dropdown-content class='f-dropdown' style='width:100px !important;'>\n              <% Year.order(year: :desc).each do |y| %>\n              <li><%= link_to y.year, controller: 'pages', action: 'results', year: y.year %></li>\n              <% end %>\n            </ul>\n          </div>\n        <% end %>\n        <% else %>\n        <div style='font-weight:bold;'>Please enter payouts for the year.</div>\n      <% end %>\n    </div>\n  </div>\n</div>\n",
+			"file": "app/views/pages/results.html.erb",
+			"file_size": 2547,
+			"file_write_time": 130682699629510078,
 			"settings":
 			{
-				"buffer_size": 766,
+				"buffer_size": 2759,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": ".gridHeaderRow {\n  font-size: xx-large;\n  text-align: center;\n}\n.gridWinnerDigitsHeaderRow {\n  text-align: center;\n}\n.gridLoserDigitsColumn {\n  font-weight: bold;\n  vertical-align: middle !important;\n}\n.gridSquare {\n  text-align: center;\n  /*height: 50px;*/\n  /*width: 95px;*/\n}\n",
+			"file": "app/views/pages/_participantWithNoResults.html.erb",
+			"settings":
+			{
+				"buffer_size": 263,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/pages/_participantWithResults.html.erb",
+			"settings":
+			{
+				"buffer_size": 1114,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<% last_updated_format = 'Last updated: %m/%d/%Y at %I:%M %p' %>\n<div>\n  <% if !last_updated_at.blank? %>\n  <%= last_updated_at.strftime(last_updated_format) %>\n  <% end %>\n</div>\n<div style='padding-top: 10px;'>\n  <%= link_to 'Refresh', path, id: 'refreshResultsLink', remote: true, class: 'btn btn-primary' %>\n</div>\n\n\n<div align='center' class='page-header'>\n  <% if path == refresh_results_path %>\n    <%= render partial: 'refresh_link', locals: { last_updated_at: @years.find_by(year: $year).results_last_updated_at } %>\n  <% else %>\n    <%= render partial: 'refresh_link', locals: { last_updated_at: @years.find_by(year: $year).bracket_last_updated_at } %>\n  <% end %>\n</div>\n",
+			"file": "app/views/pages/_refresh.html.erb",
+			"file_size": 426,
+			"file_write_time": 130682693418349815,
+			"settings":
+			{
+				"buffer_size": 682,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/pages/_refresh_link.html.erb",
+			"settings":
+			{
+				"buffer_size": 254,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "app/assets/stylesheets/grid.css",
-			"file_size": 280,
-			"file_write_time": 130681878375316732,
 			"settings":
 			{
-				"buffer_size": 279,
+				"buffer_size": 130,
 				"line_ending": "Unix"
 			}
 		},
@@ -67,38 +102,6 @@
 			"settings":
 			{
 				"buffer_size": 44,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "db/seeds.rb",
-			"settings":
-			{
-				"buffer_size": 3881,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config/routes.rb",
-			"settings":
-			{
-				"buffer_size": 1855,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/application_controller.rb",
-			"settings":
-			{
-				"buffer_size": 5288,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/pages_controller.rb",
-			"settings":
-			{
-				"buffer_size": 2364,
 				"line_ending": "Unix"
 			}
 		}
@@ -185,11 +188,14 @@
 	],
 	"file_history":
 	[
+		"/home/stumpy/Development/Projects/grid_pool/app/controllers/pages_controller.rb",
+		"/home/stumpy/Development/Projects/grid_pool/app/controllers/application_controller.rb",
+		"/home/stumpy/Development/Projects/grid_pool/config/routes.rb",
+		"/home/stumpy/Development/Projects/grid_pool/db/seeds.rb",
 		"/home/stumpy/Development/Projects/grid_pool/Gemfile",
 		"/home/stumpy/Development/Projects/grid_pool/app/assets/stylesheets/application.css.scss",
 		"/home/stumpy/Development/Projects/grid_pool/app/assets/javascripts/application.js",
 		"/home/stumpy/Development/Projects/grid_pool/app/models/game.rb",
-		"/home/stumpy/Development/Projects/grid_pool/app/controllers/application_controller.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/layouts/application.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/helpers/application_helper.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/models/participant.rb",
@@ -199,8 +205,6 @@
 		"/home/stumpy/Development/Projects/grid_pool/app/models/region.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/models/payout.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/models/participant_square.rb",
-		"/home/stumpy/Development/Projects/grid_pool/app/controllers/pages_controller.rb",
-		"/home/stumpy/Development/Projects/grid_pool/config/routes.rb",
 		"/home/stumpy/Development/Projects/grid_pool/db/migrate/20150211032629_create_participants.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/faq.html.erb",
 		"/home/stumpy/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
@@ -238,6 +242,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"render partial: 'refresh'",
+			"resultsLastUpdated",
+			"gridSquare",
 			"collapseSeven",
 			"headingSeven",
 			"collapseSix",
@@ -285,7 +292,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -325,15 +332,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2791,
+						"buffer_size": 2758,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1032,
-								1032
+								1104,
+								1104
 							]
 						],
 						"settings":
@@ -344,19 +351,110 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 155.0,
+						"translation.y": 285.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/pages/results.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2759,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2598,
+								2598
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "app/assets/stylesheets/application.css.scss",
-					"semi_transient": true,
+					"buffer": 3,
+					"file": "app/views/pages/_participantWithNoResults.html.erb",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 766,
+						"buffer_size": 263,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								263,
+								263
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/pages/_participantWithResults.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1114,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1114,
+								1114
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 15.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/pages/_refresh.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 682,
 						"regions":
 						{
 						},
@@ -369,22 +467,25 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+							"open_with_edit": true,
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/assets/stylesheets/grid.css",
+					"buffer": 6,
+					"file": "app/views/pages/_refresh_link.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 279,
+						"buffer_size": 254,
 						"regions":
 						{
 						},
@@ -393,6 +494,35 @@
 							[
 								0,
 								0
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/assets/stylesheets/grid.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 130,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								44,
+								44
 							]
 						],
 						"settings":
@@ -404,11 +534,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 8,
 					"file": "app/views/pages/faq.html.erb",
 					"semi_transient": false,
 					"settings":
@@ -430,14 +560,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 846.0,
+						"translation.y": 1124.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 9,
 					"file": "app/assets/stylesheets/faq.css",
 					"semi_transient": false,
 					"settings":
@@ -449,8 +579,8 @@
 						"selection":
 						[
 							[
-								14,
-								14
+								43,
+								43
 							]
 						],
 						"settings":
@@ -462,125 +592,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "db/seeds.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3881,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								862,
-								862
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 13.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "config/routes.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1855,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								57,
-								57
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "app/controllers/application_controller.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5288,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "app/controllers/pages_controller.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2364,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								309,
-								309
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 126.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
 					"type": "text"
 				}
 			]

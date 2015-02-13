@@ -1,0 +1,38 @@
+<% resultCounter = 0 %>
+<% totalPaid = @participant_squares.where(participant_id: participant.id).count * 5 %>
+<% totalWon = 0 %>
+<tr>
+  <% participant_results = @results.where(participant_id: participant.id) %>  
+  <%= content_tag :td, rowspan: participant_results.count + 2 do %>
+    <%= participant.preferred_name %>
+  <% end %>
+
+  <% participant_results.each do |result| %>
+    <% resultCounter += 1 %>
+      <td><%= result.round %></td>
+      <td />
+      <td>$<%= @payout = @payouts.find_by(round: result.round).game_payout %></td>
+      <td />
+
+      <% if !@payout.blank? %>
+        <% totalWon += @payout %>
+      <% end %>
+    </tr>
+  <% end %>
+
+  <tr>
+    <% profit = totalWon - totalPaid %>
+    <td style='font-weight:bold;'>Totals</td>
+    <td style='font-weight:bold;'>$<%= totalPaid %></td>
+    <td style='font-weight:bold;'>$<%= totalWon %></td>
+    <% if profit < 0 %>
+    <td style='font-weight:bold;color:red;'>
+    <% elsif profit > 0 %>
+    <td style='font-weight:bold;color:green;'>
+    <% else %>
+    <td style='font-weight:bold;'>
+    <% end %>
+      $<%= profit %>
+    </td>
+  </tr>
+</tr>

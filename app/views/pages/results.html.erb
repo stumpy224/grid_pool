@@ -1,0 +1,74 @@
+<% provide(:title, 'Results') %>
+<div align='center' id='resultsPage'>
+  <div class="panel panel-default">
+    <div class="panel-heading" style="font-size:2em;"><%= $year %> Results</div>
+    <div class="panel-body">
+      <div class="container">
+        <% if @payouts.exists? %>
+        <% if @participants_with_squares.any? %>
+        <% if @results.count < 63 %>
+        <div>
+          <% last_updated_at = @years.find_by(year: $year).results_last_updated_at %>
+          <% if !last_updated_at.blank? %>
+          <%= last_updated_at.strftime('Last updated: %m/%d/%Y at %I:%M %p') %>
+          <% end %>
+        </div>
+        <div>
+          <%= link_to 'Refresh', refresh_results_path, id: 'refreshResultsLink', remote: true, class: 'btn btn-primary' %>
+        </div>
+        <% end %>
+          <div class="row">
+        <div class="table-responsive col-lg-7 col-md-7 col-sm-7 center-block">
+          <table id="results_table" class="table table-condensed table-hover">
+            <thead>
+              <tr>
+                <th class="col-lg-3 col-md-3 col-sm-3" style="text-align:left;">Name</th>
+                <th class="col-lg-1 col-md-1 col-sm-1">Round</th>
+                <th class="col-lg-1 col-md-1 col-sm-1">$ Paid</th>
+                <th class="col-lg-1 col-md-1 col-sm-1">$ Won</th>
+                <th class="col-lg-1 col-md-1 col-sm-1">Profit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% pCounter = 0 %>
+              <% @participants_with_squares.each do |p_w_sq| %>
+              <% participant = @participants.find(p_w_sq.id) %>
+              <% pResultCount = @results.where(participant_id: participant.id).count %>
+              <% pCounter += 1 %>
+              <% if pResultCount > 0 %>
+              <%= render partial: 'participantWithResults', locals: { participant: participant } %>
+              <% else %>
+              <%= render partial: 'participantWithNoResults', locals: { counter: pCounter, participant: participant } %>
+              <% end %>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        </div>
+        <p><a class='scrollToTop' href=''>return to top</a></p>
+        <% else %>
+        <div style='font-weight:bold;'>Please enter participants for the year.</div>
+        <% end %>
+        <% if Year.many? %>
+        <div>Looking for results from a different year?</div>
+        <br />
+        <div>
+          <div class="dropdown">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              Select Year <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <% Year.order(year: :desc).each do |y| %>
+                <li><%= link_to y.year, controller: 'pages', action: 'results', year: y.year %></li>
+                <% end %>
+              </ul>
+            </div>
+            <% end %>
+            <% else %>
+            <div style='font-weight:bold;'>Please enter payouts for the year.</div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
