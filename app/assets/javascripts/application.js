@@ -65,3 +65,35 @@ function makeAllNavLinksInactive() {
   $('#nav_link_to_grid').removeClass('active');
   $('#nav_link_to_faq').removeClass('active'); 
 }
+
+$(document).ready(function() {
+  $('.scrollToTop').click(function() {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 'normal');
+  });
+});
+
+$(document).ready(function() {
+  $('#bracketLink').click(function(e) { 
+    e.stopPropagation();
+    e.preventDefault();
+    $('#wait_modal').modal('show');
+    $.get( "/refresh_bracket", function( data ) {
+      $('#wait_modal').modal('hide');
+      window.location = '/bracket'
+    });
+  });
+});
+
+$(document).ready(function() {
+  $('#refresh_results_link').click(function(e) { 
+    e.stopPropagation();
+    e.preventDefault();
+    $('#wait_modal').modal('show');
+    $.get( "/refresh_results", function( data ) {
+      $('#wait_modal').modal('hide');
+      $( "#results_page" ).load( window.location.href + ' #results_page');
+    });
+  });
+});
