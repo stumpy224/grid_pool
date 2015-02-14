@@ -37,50 +37,48 @@
 				<div class="panel-heading" role="tab" id="headingThree">
 					<h4 class="panel-title">
 					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-						How do I know if I've won?
+						How do I know if I won?
 					</a>
 					</h4>
 				</div>
 				<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 					<div class="panel-body">
 						After a game is over, the winner of the game is determined by finding the column with the LAST digit of the winner's score, and the row with the LAST digit of the loser's score.  The name found in the square is the winner.  For example, let's say I have the square for winner=7 and loser=5, and Purdue beats Indiana 8<b><u>7</u></b> to 7<b><u>5</u></b>.  I would be considered the winner for that game.
-						<div class="container" style="padding-top:2em;">
-   <div class="row">
-     <div class="col-lg-4 col-md-4 col-sm-4">
-						<div class="table-responsive">
-							<table id="faq_table" class="table table-condensed table-bordered">
-								<thead>
-									<tr>
-										<th>&nbsp;</th>
-										<th>0</th>
-										<th>7</th>
-										<th>8</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>9</td>
-										<td>&nbsp;</td>
-										<td>&nbsp;</td>
-										<td>&nbsp;</td>
-									</tr>
-									<tr>
-										<td>5</td>
-										<td>&nbsp;</td>
-										<td style="background-color:whitesmoke;"><b>Winner</b></td>
-										<td>&nbsp;</td>
-									</tr>
-									<tr>
-										<td>2</td>
-										<td>&nbsp;</td>
-										<td>&nbsp;</td>
-										<td>&nbsp;</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						</div>
-						</div>
+						<div class="row">
+							<div class="col-md-4 col-sm-4 table-centered">
+								<div class="table-responsive" style="margin-top:1em;">
+									<table id="faq_grid_winner_example" class="table table-condensed table-bordered">
+										<thead>
+											<tr>
+												<th class="col-lg-1 col-md-1 col-sm-1">&nbsp;</th>
+												<th class="col-lg-1 col-md-1 col-sm-1">0</th>
+												<th class="col-lg-1 col-md-1 col-sm-1 grid-winner-locator-example">7</th>
+												<th class="col-lg-1 col-md-1 col-sm-1">8</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>9</td>
+												<td>&nbsp;</td>
+												<td>&nbsp;</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr>
+												<td class="grid-winner-locator-example">5</td>
+												<td>&nbsp;</td>
+												<td class="grid-winner-example"><b>Winner</b></td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>&nbsp;</td>
+												<td>&nbsp;</td>
+												<td>&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -103,66 +101,70 @@
 				<div class="panel-heading" role="tab" id="headingFive">
 					<h4 class="panel-title">
 					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-						I have a winning square, but how much did I win?
+						I have a winning square... how much did I win?
 					</a>
 					</h4>
 				</div>
 				<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
 					<div class="panel-body">
-						<table class='table'>
-							<thead>
-								<tr>
-									<th>Round</th>
-									<th># of<br />Winners</th>
-									<th>Payout<br />Per Game</th>
-									<th>Total<br />Payout</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>2</td>
-									<td>32</td>
-									<td>$5</td>
-									<td>$160</td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td>16</td>
-									<td>$8</td>
-									<td>$128</td>
-								</tr>
-								<tr>
-									<td>4</td>
-									<td>8</td>
-									<td>$10</td>
-									<td>$80</td>
-								</tr>
-								<tr>
-									<td>5</td>
-									<td>4</td>
-									<td>$15</td>
-									<td>$60</td>
-								</tr>
-								<tr>
-									<td>6</td>
-									<td>2</td>
-									<td>$20</td>
-									<td>$40</td>
-								</tr>
-								<tr>
-									<td>7</td>
-									<td>1</td>
-									<td>$32</td>
-									<td>$32</td>
-								</tr>
-								<tr style='font-weight:bold;'>
-									<td>Total</td>
-									<td>63</td>
-									<td>&nbsp;</td>
-									<td>$500</td>
-								</tr>
-							</tbody>
-						</table>
+						<div class="row">
+							<div class="table-responsive">
+								<table id="faq_payouts" class='table table-condensed table-hover'>
+									<thead>
+										<tr>
+											<th>Round</th>
+											<th># of<br />Winners</th>
+											<th>Payout<br />Per Game</th>
+											<th>Total<br />Payout</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>2</td>
+											<td>32</td>
+											<td>$5</td>
+											<td>$160</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>16</td>
+											<td>$8</td>
+											<td>$128</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>8</td>
+											<td>$10</td>
+											<td>$80</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>4</td>
+											<td>$15</td>
+											<td>$60</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>2</td>
+											<td>$20</td>
+											<td>$40</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td>1</td>
+											<td>$32</td>
+											<td>$32</td>
+										</tr>
+										<tr class="totalRow">
+											<td>Total</td>
+											<td>63</td>
+											<td>&nbsp;</td>
+											<td>$500</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -1,3 +1,22 @@
-#faq_table th, td {
+#faq_grid_winner_example th, td {
+  font-weight: normal;
   text-align: center;
+}
+#faq_payouts th, td {
+  text-align: center;
+}
+.grid-winner-locator-example {
+  background-color: whitesmoke;
+  color: black;
+  font-weight: bold !important;
+}
+.grid-winner-example {
+  background-color: #dff0d8!important;
+  color: #468847;
+  font-weight: bold;
+}
+.totalRow {
+  border-top: solid 2px;
+  border-top-color: black;
+  border-top-style: solid;
 }

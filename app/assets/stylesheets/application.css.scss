@@ -18,3 +18,12 @@ $navbar-border-radius: 0;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}
+
+.table-centered {
+  margin: 0 auto !important;
+  float: none !important;
+}

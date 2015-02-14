@@ -29,32 +29,32 @@ function init() {
 }
 
 function setActiveNavbarLink() {
-  if (window.location.pathname == '/')
+  if (window.location.pathname == '/' || window.location.pathname.indexOf("/?year") > -1)
     setActiveNavbarLinkToRoot();
-  else if (window.location.pathname == '/bracket')
-    setActiveNavbarToBracket();
-  else if (window.location.pathname == '/grid')
-    setActiveNavbarToGrid();
-  else if (window.location.pathname == '/faq')
-    setActiveNavbarToFaq();
+  else if (window.location.pathname.indexOf("/bracket") > -1)
+    setActiveNavbarLinkToBracket();
+  else if (window.location.pathname.indexOf("/grid") > -1)
+    setActiveNavbarLinkToGrid();
+  else if (window.location.pathname.indexOf("/faq") > -1)
+    setActiveNavbarLinkToFaq();
 }
 
-function setActiveNavbarToRoot() {
+function setActiveNavbarLinkToRoot() {
   makeAllNavLinksInactive();
   $('#nav_link_to_results').addClass('active');
 }
 
-function setActiveNavbarToBracket() {
+function setActiveNavbarLinkToBracket() {
   makeAllNavLinksInactive();
   $('#nav_link_to_bracket').addClass('active');
 }
 
-function setActiveNavbarToGrid() {
+function setActiveNavbarLinkToGrid() {
   makeAllNavLinksInactive();
   $('#nav_link_to_grid').addClass('active');
 }
 
-function setActiveNavbarToFaq() {
+function setActiveNavbarLinkToFaq() {
   makeAllNavLinksInactive();
   $('#nav_link_to_faq').addClass('active');
 }
