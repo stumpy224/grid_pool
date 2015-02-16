@@ -3,7 +3,7 @@
 <% totalWon = 0 %>
 <tr>
   <% participant_results = @results.where(participant_id: participant.id) %>  
-  <%= content_tag :td, rowspan: participant_results.count + 2 do %>
+  <%= content_tag :td, rowspan: participant_results.count + 1, style: "text-align:left;" do %>
     <%= participant.preferred_name %>
   <% end %>
 
