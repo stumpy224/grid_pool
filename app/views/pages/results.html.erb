@@ -4,91 +4,111 @@
     <div class="panel-heading" style="font-size:2em;"><%= $year %> Results</div>
     <div class="panel-body">
       <% if @payouts.exists? %>
-      <% if @participants_with_squares.any? %>
-      <% if @results.count < 63 %>
-      <div>
-        <% last_updated_at = @years.find_by(year: $year).results_last_updated_at %>
-        <% if !last_updated_at.blank? %>
-        <%= last_updated_at.strftime('Last updated: %m/%d/%Y at %I:%M %p') %>
-        <% end %>
-      </div>
-      <div>
-        <%= link_to 'Refresh', refresh_results_path, id: 'refresh_results_link', remote: true, class: 'btn btn-primary' %>
-      </div>
-      <% end %>
-      <% pCounter = 0 %>
-      <% @participants_with_squares.each do |p_w_sq| %>
-      <% participant = @participants.find(p_w_sq.id) %>
-      <% pResultCount = @results.where(participant_id: participant.id).count %>
-      <% pCounter += 1 %>
-
-      <% resultCounter = 0 %>
-      <% totalPaid = @participant_squares.where(participant_id: participant.id).count * 5 %>
-      <% totalWon = 0 %>
-      <% participant_results = @results.where(participant_id: participant.id) %>
-
-      <div class="col-lg-4 col-md-4 col-sm-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title"><%= participant.preferred_name %></h3>
-          </div>
-          <div class="panel-body">
+        <% if @participants_with_squares.any? %>
+          <% if @results.count < 63 %>
             <div>
-              <form class="form-inline">
-                <div>
-                  <label>Won:</label>
-                  <label style="font-weight:normal;">$23</label>
-                  <h5 style="margin-top:0;"><small>winning rounds 2, 3, 4, 6</small></h5>
-                </div>
-              </form>
-            </div>
-            <div>
-              <form class="form-inline">
-                <div class="form-group col-lg-6 col-md-6 col-sm-6">
-                  <label>Paid:</label>
-                  <label style="font-weight:normal;">$20</label>
-                </div>
-                <div class="form-group">
-                  <label>Profit:</label>
-                  <label style="font-weight:normal;">$3</label>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      
-      <% if pResultCount > 0 %>
-      <% else %>
-      <% end %>
-      <% end %>
-      <p><a class='scrollToTop' href=''>return to top</a></p>
-      <% else %>
-      <div style='font-weight:bold;'>Please enter participants for the year.</div>
-      <% end %>
-      <% if Year.many? %>
-      <div>Looking for results from a different year?</div>
-      <br />
-      <div>
-        <div class="dropdown">
-          <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            Select Year <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <% Year.order(year: :desc).each do |y| %>
-              <li><%= link_to y.year, controller: 'pages', action: 'results', year: y.year %></li>
+              <% last_updated_at = @years.find_by(year: $year).results_last_updated_at %>
+              <% if !last_updated_at.blank? %>
+                <%= last_updated_at.strftime('Last updated: %m/%d/%Y at %I:%M %p') %>
               <% end %>
-            </ul>
+            </div>
+            <div>
+              <%= link_to 'Refresh', refresh_results_path, id: 'refresh_results_link', remote: true, class: 'btn btn-primary' %>
+            </div>
+          <% end %>
+          <% @participants_with_squares.each do |p_w_sq| %>
+            <% participant = @participants.find(p_w_sq.id) %>
+
+            <% resultCounter = 0 %>
+            <% totalPaid = @participant_squares.where(participant_id: participant.id).count * 5 %>
+            <% totalWon = 0 %>
+            <% participant_results = @results.where(participant_id: participant.id) %>
+
+            <% winning_rounds_text = "&nbsp;".html_safe %>
+            
+            <% if participant_results.count > 1 %>
+              <% winning_rounds_text = "from rounds " %>
+            <% elsif participant_results.count == 1 %>
+              <% winning_rounds_text = "from round " %>
+            <% end %>
+
+            <% participant_results.each do |result| %>
+              <% resultCounter += 1 %>
+
+              <% if resultCounter == participant_results.count %>
+                <% winning_rounds_text.concat("#{result.round}") %>
+              <% else %>
+                <% winning_rounds_text.concat("#{result.round}, ") %>
+              <% end %>
+
+              <% @payout = @payouts.find_by(round: result.round).game_payout %>
+              <% if !@payout.blank? %>
+                <% totalWon += @payout %>
+              <% end %>
+            <% end %>
+
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title"><%= participant.preferred_name %></h3>
+                </div>
+                <div class="panel-body">
+                  <div>
+                    <form class="form-inline">
+                      <div>
+                        <label>Won:</label>
+                        <label style="font-weight:normal;">$<%= totalWon %></label>
+                        <h5 style="margin-top:0;"><small><%= winning_rounds_text %></small></h5>
+                      </div>
+                    </form>
+                  </div>
+                  <div>
+                    <form class="form-inline">
+                      <div class="form-group col-lg-6 col-md-6 col-sm-6">
+                        <label>Paid:</label>
+                        <label style="font-weight:normal;">$<%= totalPaid %></label>
+                      </div>
+                      <div class="form-group">
+                        <label>Profit:</label>
+                        <% profit = totalWon - totalPaid %>
+                        <% if profit > 0 %>
+                          <label style="font-weight:normal;color:green;">
+                        <% elsif profit < 0 %>
+                          <label style="font-weight:normal;color:red;">
+                        <% else %>
+                          <label style="font-weight:normal;">
+                        <% end %>
+                          $<%= profit %>
+                          </label>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% else %>
+          <div style='font-weight:bold;'>Please enter participants for the year.</div>
+        <% end %>
+        <% if Year.many? %>
+          <div>Looking for results from a different year?</div>
+          <br />
+          <div class="dropdown">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              Select Year <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <% Year.order(year: :desc).each do |y| %>
+                <li><%= link_to y.year, controller: 'pages', action: 'results', year: y.year %></li>
+                <% end %>
+              </ul>
+            </div>
           </div>
-          <% end %>
-          <% else %>
-          <div style='font-weight:bold;'>Please enter payouts for the year.</div>
-          <% end %>
-        </div>
-      </div>
+        <% end %>
+      <% else %>
+        <div style='font-weight:bold;'>Please enter payouts for the year.</div>
+      <% end %>
     </div>
   </div>
 </div>
