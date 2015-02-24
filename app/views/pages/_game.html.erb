@@ -12,33 +12,31 @@
     <% end %>
   <% end %>
   <% if g.game_is_live? %>
-  <div class='game-cell gameIsLive'>
+  <div class='game-cell game-is-live'>
   <% else %>
   <div class='game-cell'>
   <% end %>
     <% if g.team_on_top_is_winner? %>
-      <div class='teamInfo_top winner'>
+      <div class='team-info info-top winner'>
     <% else %>
-      <div class='teamInfo_top'>
+      <div class='team-info info-top'>
     <% end %>
-        <div class='teamLogo'></div>
-        <div class='teamSeed'><%= g.team_on_top_seed %></div>
-        <%= content_tag :div, class: 'teamName', title: g.team_on_top_name_full do %>
+        <div class='team-seed'><%= g.team_on_top_seed %></div>
+        <%= content_tag :div, class: 'team-name', title: g.team_on_top_name_full do %>
           <%= g.team_on_top_name_short %>
         <% end %>
-        <div class='teamScore'><%= g.team_on_top_score %></div>
+        <div class='team-score'><%= g.team_on_top_score %></div>
     </div>
     <% if g.team_on_bottom_is_winner %>
-      <div class='teamInfo_bottom winner'>
+      <div class='team-info info-bottom winner'>
     <% else %>
-      <div class='teamInfo_bottom'>
+      <div class='team-info info-bottom'>
     <% end %>
-        <div class='teamLogo'></div>
-        <div class='teamSeed'><%= g.team_on_bottom_seed %></div>
-        <%= content_tag :div, class: 'teamName', title: g.team_on_bottom_name_full do %>
+        <div class='team-seed'><%= g.team_on_bottom_seed %></div>
+        <%= content_tag :div, class: 'team-name', title: g.team_on_bottom_name_full do %>
           <%= g.team_on_bottom_name_short %>
         <% end %>
-        <div class='teamScore'><%= g.team_on_bottom_score %></div>
+        <div class='team-score'><%= g.team_on_bottom_score %></div>
     </div>
   </div>
   <% winnerStyle = '' %>

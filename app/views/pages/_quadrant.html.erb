@@ -1,0 +1,36 @@
+  <% round_two = 200 %>
+  <% round_three = 300 %>
+  <% round_four = 400 %>
+  <% round_five = 500 %>
+
+<div class="region-info">
+  Midwest
+</div>
+
+<% (1..8).each do |i| %>
+  <% game_id = round_two + i %>
+  <%= content_tag :section, id: "game#{game_id}", class: "game-set pre game-xs sect-2 col-1 pos-#{i}" do %>
+    <%= render partial: 'game', locals: { bracket_position_id: "#{game_id}" } %>
+  <% end %>
+<% end %>
+
+<% (1..4).each do |i| %>
+  <% game_id = round_three + i %>
+  <%= content_tag :section, id: "game#{game_id}", class: "game-set pre game-xs sect-2 col-2 pos-#{i}" do %>
+    <%= render partial: 'game', locals: { bracket_position_id: "#{game_id}" } %>
+  <% end %>
+<% end %>
+
+<% (1..2).each do |i| %>
+  <% game_id = round_four + i %>
+  <%= content_tag :section, id: "game#{game_id}", class: "game-set pre game-xs sect-2 col-3 pos-#{i}" do %>
+    <%= render partial: 'game', locals: { bracket_position_id: "#{game_id}" } %>
+  <% end %>
+<% end %>
+
+<% (1..1).each do |i| %>
+  <% game_id = round_five + i %>
+  <%= content_tag :section, id: "game#{game_id}", class: "game-set pre game-xs sect-2 col-4 pos-#{quadrant}" do %>
+    <%= render partial: 'game', locals: { bracket_position_id: "#{game_id}" } %>
+  <% end %>
+<% end %>

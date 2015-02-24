@@ -56,7 +56,7 @@
                   <div>
                     <form class="form-inline">
                       <div>
-                        <label>Won:</label>
+                        <label>Won</label>
                         <label style="font-weight:normal;">$<%= totalWon %></label>
                         <h5 style="margin-top:0;"><small><%= winning_rounds_text %></small></h5>
                       </div>
@@ -65,11 +65,11 @@
                   <div>
                     <form class="form-inline">
                       <div class="form-group col-lg-6 col-md-6 col-sm-6">
-                        <label>Paid:</label>
+                        <label>Paid</label>
                         <label style="font-weight:normal;">$<%= totalPaid %></label>
                       </div>
                       <div class="form-group">
-                        <label>Profit:</label>
+                        <label>Profit</label>
                         <% profit = totalWon - totalPaid %>
                         <% if profit > 0 %>
                           <label style="font-weight:normal;color:green;">

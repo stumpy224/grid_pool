@@ -99,7 +99,7 @@ text-align:left;
 }
 
 .rtl .winner .team-score {
-background:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/arrows/arrow-right-blue-sm.png) no-repeat scroll 3px center transparent;
+
 }
 
 .ltr .team-name,.ltr team-seed,.ctr .team-name,.ctr team-seed,.third-place .team-name,.third-place team-seed {
@@ -123,7 +123,7 @@ text-align:right;
 }
 
 .ltr .winner .team-score,.ctr .winner .team-score,.third-place .winner .team-score {
-background:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/arrows/arrow-left-blue-sm.png) no-repeat scroll 23px center transparent;
+
 }
 
 .third-place .live-bottom {
@@ -1237,4 +1237,10 @@ position:relative;
 width:1000px;
 margin:0 auto;
 padding:0;
+}
+
+.gameIsLive {
+  -webkit-box-shadow: 0 0 5px 2px darkgray;
+  -moz-box-shadow: 0 0 5px 2px darkgray;
+  box-shadow: 0 0 5px 2px darkgray;
 }
