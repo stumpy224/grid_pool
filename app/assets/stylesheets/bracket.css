@@ -78,7 +78,7 @@ direction:rtl;
 }
 
 .rtl .team-seed {
-padding:0 5px 0 1px;
+padding:1px 5px 0 1px;
 }
 
 .rtl .team-score {
@@ -455,7 +455,7 @@ width:24px;
 .team-seed {
 float:left;
 text-align:right;
-width:12px;
+width:10%;
 color:#AAA;
 font-size:10px;
 font-weight:700;
@@ -1239,7 +1239,7 @@ margin:0 auto;
 padding:0;
 }
 
-.gameIsLive {
+.game-is-live {
   -webkit-box-shadow: 0 0 5px 2px darkgray;
   -moz-box-shadow: 0 0 5px 2px darkgray;
   box-shadow: 0 0 5px 2px darkgray;

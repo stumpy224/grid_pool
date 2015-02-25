@@ -2,9 +2,9 @@
 <% if g.nil? %>
   <%= render partial: 'empty_game', locals: { bracket_position_id: bracket_position_id } %>
 <% else %>
-  <% if bracket_position_id != '701' %>
+  <% if bracket_position_id != "701" %>
     <% if g.game_is_live? %>
-    <%= content_tag :div, class: 'live-top', title: g.game_status do %>
+      <%= content_tag :div, class: 'live-top', title: g.game_status do %>
         <%= g.game_status %>
       <% end %>
     <% else %>
