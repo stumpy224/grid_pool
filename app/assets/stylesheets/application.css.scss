@@ -23,6 +23,10 @@ $navbar-border-radius: 0;
   fieldset { display: table-cell; }
 }
 
+body {
+  background-image:url(image_path('bballCourt.jpg'));
+}
+
 .divider {
   height: 1px;
   width: 100%;

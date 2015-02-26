@@ -39,11 +39,7 @@
         <div class='team-score'><%= g.team_on_bottom_score %></div>
     </div>
   </div>
-  <% winnerStyle = '' %>
-  <% if bracket_position_id == '602' %>
-    <% winnerStyle = 'text-align:right;' %>
-  <% end %>
-  <%= content_tag :div, class: 'live-bottom', title: g.square_winner, style: winnerStyle do %>
+  <%= content_tag :div, class: 'live-bottom', title: g.square_winner do %>
     <%= g.square_winner %>
   <% end %>
 <% end %>

@@ -8,6 +8,7 @@
         <section id="bracket-top-left" class="bracket-region ltr">
           <%= render partial: 'quadrant', locals: { quadrant: 1 } %>
         </section>
+
         <section id="bracket-top-right" class="bracket-region rtl">
           <%= render partial: 'quadrant', locals: { quadrant: 3 } %>
         </section>
@@ -15,169 +16,26 @@
       <div id="bracket-middle" class="bracket-section">
         <div class="champ-logo"><img class="championship-bracket-logo" typeof="foaf:Image" src="http://i.turner.ncaa.com/dr/ncaa/ncaa7/release/sites/default/files/styles/championship_bracket_logo/public/m_final_four.png?itok=6L8M8-mp" alt=""></div>
         <section id="bracket-final" class="bracket-region ctr">
-          <h2 class="element-invisible">FINAL FOUR®</h2>
-          <div id="bracket-final-header">
-            <div class="region-info">
-            </div>
-          </div>
           <div id="bracket-final-games">
-            
-            <section id="game601" class="game-set  sect-6 col-1 pos-1  pre  game-sm ">
-              <h3 class="element-invisible"> vs </h3>
-              <div class="live-top">
-                
-                
-                
-                
-                
-                
-                
-              </div>
-              <div class="game-cell pre ">
-                <div class="team-info info-top ">
-                  
-                  <div class="team-seed"></div>
-                  
-                  <div class="team-name"></div>
-                  
-                  
-                  <div class="game-status">
-                    <div class="game-preview">
-                      <div class="inner">
-                        <span>Apr 4</span>
-                        <span></span>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="game-status">
-                    
-                  </div>
-                </div>
-                <div class="team-info info-bottom ">
-                  
-                  <div class="team-seed"></div>
-                  
-                  <div class="team-name"></div>
-                  
-                  <div class="game-status">
-                    
-                  </div>
-                </div>
-              </div>
-              <div class="live-bottom">
-                
-              </div>
+            <section id="game601" class="game-set pre game-sm sect-6 col-1 pos-1">
+              <%= render partial: 'game', locals: { bracket_position_id: "601" } %>
+            </section>
+
+            <section id="game701" class="game-set pre game-lg championship sect-6 col-2 pos-1">
+              <%= render partial: 'game', locals: { bracket_position_id: "701" } %>
             </section>
             
-            <section id="game701" class="game-set  sect-6 col-2 pos-1  pre  game-lg championship">
-              <h3 class="element-invisible"> vs </h3>
-              <div class="live-top">
-                
-                
-                
-                
-                
-                
-                
-              </div>
-              <div class="game-cell pre ">
-                <div class="team-info info-top ">
-                  
-                  <div class="team-seed"></div>
-                  
-                  <div class="team-name"></div>
-                  
-                  
-                  <div class="game-status">
-                    <div class="game-preview">
-                      <div class="inner">
-                        <span>Apr 6</span>
-                        <span></span>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="game-status">
-                    
-                  </div>
-                </div>
-                <div class="team-info info-bottom ">
-                  
-                  <div class="team-seed"></div>
-                  
-                  <div class="team-name"></div>
-                  
-                  <div class="game-status">
-                    
-                  </div>
-                </div>
-              </div>
-              <div class="live-bottom">
-                
-              </div>
-            </section>
-            
-            <section id="game602" class="game-set  sect-6 col-3 pos-1  pre  game-sm ">
-              <h3 class="element-invisible"> vs </h3>
-              <div class="live-top">
-                
-                
-                
-                
-                
-                
-                
-              </div>
-              <div class="game-cell pre ">
-                <div class="team-info info-top ">
-                  
-                  <div class="team-seed"></div>
-                  
-                  <div class="team-name"></div>
-                  
-                  
-                  <div class="game-status">
-                    <div class="game-preview">
-                      <div class="inner">
-                        <span>Apr 4</span>
-                        <span></span>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="game-status">
-                    
-                  </div>
-                </div>
-                <div class="team-info info-bottom ">
-                  
-                  <div class="team-seed"></div>
-                  
-                  <div class="team-name"></div>
-                  
-                  <div class="game-status">
-                    
-                  </div>
-                </div>
-              </div>
-              <div class="live-bottom">
-                
-              </div>
+            <section id="game602" class="game-set pre game-sm sect-6 col-3 pos-1">
+              <%= render partial: 'game', locals: { bracket_position_id: "602" } %>
             </section>
           </div>
-          <figure id="bracket-champ">
-            <h3 class="element-invisible">WINNER</h3>
-          </figure>
         </section>
       </div>
       <div id="bracket-bottom" class="bracket-section">
         <section id="bracket-bottom-left" class="bracket-region ltr">
           <%= render partial: 'quadrant', locals: { quadrant: 2 } %>
         </section>
+
         <section id="bracket-bottom-right" class="bracket-region rtl">
           <%= render partial: 'quadrant', locals: { quadrant: 4 } %>
         </section>
@@ -185,207 +43,23 @@
       <div id="bracket-footer" class="bracket-section ">
         <section id="bracket-first" class="bracket-region ctr">
           <div class="region-info">
-            <h2 class="region-title">First Four®</h2>
-            <ul>
-              <li class="region-subtitle">March 17-18, DAYTON</li>
-            </ul>
+            <h2 class="region-title">First Four</h2>
           </div>
           
-          <section id="game101" class="game-set  sect-1 col-1 pos-1  pre  game-xs ">
-            <h3 class="element-invisible"> vs </h3>
-            <div class="live-top">
-              
-              
-              
-              
-              
-              
-              
-            </div>
-            <div class="game-cell pre ">
-              <div class="team-info info-top ">
-                
-                <div class="team-seed"></div>
-                
-                <div class="team-name"></div>
-                
-                
-                <div class="game-status">
-                  <div class="game-preview">
-                    <div class="inner">
-                      <span>Mar 17</span>
-                      <span></span>
-                      
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="game-status">
-                  
-                </div>
-              </div>
-              <div class="team-info info-bottom ">
-                
-                <div class="team-seed"></div>
-                
-                <div class="team-name"></div>
-                
-                <div class="game-status">
-                  
-                </div>
-              </div>
-            </div>
-            <div class="live-bottom">
-              
-            </div>
+          <section id="game101" class="game-set pre game-xs sect-1 col-1 pos-1">
+            <%= render partial: 'game', locals: { bracket_position_id: "101" } %>
           </section>
           
-          <section id="game102" class="game-set  sect-1 col-2 pos-1  pre  game-xs ">
-            <h3 class="element-invisible"> vs </h3>
-            <div class="live-top">
-              
-              
-              
-              
-              
-              
-              
-            </div>
-            <div class="game-cell pre ">
-              <div class="team-info info-top ">
-                
-                <div class="team-seed"></div>
-                
-                <div class="team-name"></div>
-                
-                
-                <div class="game-status">
-                  <div class="game-preview">
-                    <div class="inner">
-                      <span>Mar 17</span>
-                      <span></span>
-                      
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="game-status">
-                  
-                </div>
-              </div>
-              <div class="team-info info-bottom ">
-                
-                <div class="team-seed"></div>
-                
-                <div class="team-name"></div>
-                
-                <div class="game-status">
-                  
-                </div>
-              </div>
-            </div>
-            <div class="live-bottom">
-              
-            </div>
+          <section id="game102" class="game-set pre game-xs sect-1 col-2 pos-1">
+            <%= render partial: 'game', locals: { bracket_position_id: "102" } %>
           </section>
           
-          <section id="game103" class="game-set  sect-1 col-3 pos-1  pre  game-xs ">
-            <h3 class="element-invisible"> vs </h3>
-            <div class="live-top">
-              
-              
-              
-              
-              
-              
-              
-            </div>
-            <div class="game-cell pre ">
-              <div class="team-info info-top ">
-                
-                <div class="team-seed"></div>
-                
-                <div class="team-name"></div>
-                
-                
-                <div class="game-status">
-                  <div class="game-preview">
-                    <div class="inner">
-                      <span>Mar 18</span>
-                      <span></span>
-                      
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="game-status">
-                  
-                </div>
-              </div>
-              <div class="team-info info-bottom ">
-                
-                <div class="team-seed"></div>
-                
-                <div class="team-name"></div>
-                
-                <div class="game-status">
-                  
-                </div>
-              </div>
-            </div>
-            <div class="live-bottom">
-              
-            </div>
+          <section id="game103" class="game-set pre game-xs sect-1 col-3 pos-1">
+            <%= render partial: 'game', locals: { bracket_position_id: "103" } %>
           </section>
           
-          
-          <section id="game104" class="game-set  sect-1 col-4 pos-1  pre  game-xs ">
-            <h3 class="element-invisible"> vs </h3>
-            <div class="live-top">
-              
-              
-              
-              
-              
-              
-              
-            </div>
-            <div class="game-cell pre ">
-              <div class="team-info info-top ">
-                
-                <div class="team-seed"></div>
-                
-                <div class="team-name"></div>
-                
-                
-                <div class="game-status">
-                  <div class="game-preview">
-                    <div class="inner">
-                      <span>Mar 18</span>
-                      <span></span>
-                      
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="game-status">
-                  
-                </div>
-              </div>
-              <div class="team-info info-bottom ">
-                
-                <div class="team-seed"></div>
-                
-                <div class="team-name"></div>
-                
-                <div class="game-status">
-                  
-                </div>
-              </div>
-            </div>
-            <div class="live-bottom">
-              
-            </div>
+          <section id="game104" class="game-set pre game-xs sect-1 col-4 pos-1">
+            <%= render partial: 'game', locals: { bracket_position_id: "104" } %>
           </section>
           
         </section>

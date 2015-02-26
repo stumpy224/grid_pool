@@ -71,7 +71,7 @@
 			"file": "app/views/pages/bracket.html.erb",
 			"settings":
 			{
-				"buffer_size": 75067,
+				"buffer_size": 3256,
 				"line_ending": "Unix"
 			}
 		},
@@ -79,7 +79,7 @@
 			"file": "app/views/pages/_quadrant.html.erb",
 			"settings":
 			{
-				"buffer_size": 1231,
+				"buffer_size": 1206,
 				"line_ending": "Unix"
 			}
 		},
@@ -87,7 +87,15 @@
 			"file": "app/views/pages/_game.html.erb",
 			"settings":
 			{
-				"buffer_size": 1743,
+				"buffer_size": 1604,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/pages_controller.rb",
+			"settings":
+			{
+				"buffer_size": 2364,
 				"line_ending": "Unix"
 			}
 		},
@@ -100,45 +108,18 @@
 			}
 		},
 		{
-			"file": "fake_response.txt",
-			"settings":
-			{
-				"buffer_size": 145402,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/pages/_empty_game.html.erb",
-			"settings":
-			{
-				"buffer_size": 485,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/bracket_old.css",
-			"settings":
-			{
-				"buffer_size": 26141,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/pages/bracket_old.html.erb",
-			"settings":
-			{
-				"buffer_size": 17822,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": ".element-invisible {\nposition:absolute!important;\nclip:rect(1px,1px,1px,1px);\noverflow:hidden;\nheight:1px;\n}\n\n.element-invisible.element-focusable:active,.element-invisible.element-focusable:focus {\nposition:static!important;\nclip:auto;\noverflow:visible;\nheight:auto;\n}\n\n.champ-logo {\nwidth:170px;\nposition:absolute;\ndisplay:block;\nright:400px;\ntext-align:Center;\ntop:-160px;\n}\n\n.bracket-section {\nwidth:100%;\ndisplay:inline-block;\nposition:relative;\n-webkit-box-sizing:border-box;\n-moz-box-sizing:border-box;\nbox-sizing:border-box;\n}\n\n.bracket-footer {\nclear:both;\ntext-align:center;\nfont-weight:700;\nmargin-bottom:34px;\nmargin-top:13px;\nheight:21px;\n}\n\n.game-xs {\nwidth:160px;\n}\n\n.game-sm {\nwidth:180px;\n}\n\n.game-md {\nwidth:183px;\n}\n\n.game-lg {\nwidth:200px;\n}\n\n.disabled {\nopacity:0;\nvisibility:hidden;\n}\n\n.game-cell {\nfont-weight:400;\nz-index:10;\nposition:relative;\ncolor:#888;\n}\n\n.ltr {\nfloat:left;\ndirection:ltr;\n}\n\n.rtl {\nfloat:right;\ndirection:rtl;\n}\n\n.rtl .team-seed {\npadding:0 5px 0 1px;\n}\n\n.rtl .team-score {\nfloat:left;\ntext-align:left;\npadding-left:12px;\n}\n\n.rtl .game-time,.rtl .game-quarter {\nfloat:left;\ntext-align:right;\npadding-left:5px;\n}\n\n.rtl .last .game-time,.rtl .last .game-quarter,.rtl .last .team-score {\nfloat:left;\ntext-align:left;\n}\n\n.rtl .winner .team-score {\n\n}\n\n.ltr .team-name,.ltr team-seed,.ctr .team-name,.ctr team-seed,.third-place .team-name,.third-place team-seed {\nfloat:left;\ntext-align:right;\n}\n\n.ltr .team-seed,.ctr .team-seed,.third-place .team-seed {\npadding:1px 1px 0 1px;\n}\n\n.ltr .team-score,.ctr .team-score,.third-place .team-score {\nfloat:right;\ntext-align:right;\npadding-right:12px;\n}\n\n.ltr .last .game-time,.ltr .last .game-quarter,.ltr .last .team-score,.ctr .last .game-time,.ctr .last .game-quarter,.ctr .last .team-score,.third-place .last .game-time,.third-place .last .game-quarter,.third-place .last .team-score {\nfloat:right;\ntext-align:right;\n}\n\n.ltr .winner .team-score,.ctr .winner .team-score,.third-place .winner .team-score {\n\n}\n\n.third-place .live-bottom {\nfloat:none;\nmargin:auto;\n}\n\n.game-set.has-data:hover .game-cell {\n-webkit-box-shadow:0 0 4px 4px rgba(0,0,0,0.05);\n-moz-box-shadow:0 0 4px 4px rgba(0,0,0,0.05);\nbox-shadow:0 0 4px 4px rgba(0,0,0,0.05);\n}\n\n#bracket-top,#bracket-bottom {\nheight:680px;\n}\n\n#bracket-middle {\nheight:150px;\n}\n\n#bracket-footer {\nheight:100px;\nbackground:#a5a5ad;\nmargin:10px auto;\npadding:10px 0;\n}\n\n.ltr .col-1 {\nleft:4px;\n}\n\n.ltr .col-2 {\nleft:177px;\n}\n\n.ltr .col-3 {\nleft:245px;\n}\n\n.ltr .col-4 {\nleft:310px;\n}\n\n.rtl .col-1 {\nright:4px;\n}\n\n.rtl .col-2 {\nright:177px;\n}\n\n.rtl .col-3 {\nright:245px;\n}\n\n.rtl .col-4 {\nright:310px;\n}\n\n.col-1.pos-2 {\ntop:80px;\n}\n\n.col-1.pos-3 {\ntop:168px;\n}\n\n.col-1.pos-4 {\ntop:248px;\n}\n\n.col-1.pos-5 {\ntop:340px;\n}\n\n.col-1.pos-6 {\ntop:422px;\n}\n\n.col-1.pos-7 {\ntop:511px;\n}\n\n.col-1.pos-8 {\ntop:591px;\n}\n\n.col-2.pos-1 {\ntop:39px;\n}\n\n.col-2.pos-2 {\ntop:210px;\n}\n\n.col-2.pos-3 {\ntop:382px;\n}\n\n.col-2.pos-4 {\ntop:551px;\n}\n\n.col-3.pos-1 {\ntop:124px;\n}\n\n.col-3.pos-2 {\ntop:467px;\n}\n\n.col-4.pos-1 {\ntop:297px;\n}\n\n.region-info .region-title {\ncolor:#00375C;\nmargin-bottom:0;\nmargin-top:12px;\nfont-family:TechwoodSlabW04,Rockwell,Georgia,serif;\nfont-size:18px;\nfont-weight:700;\n}\n\n.region-info .region-title,.region-info .region-subtitle {\nwidth:200px;\ntext-transform:uppercase;\n}\n\n.region-info li {\nfont-size:9px;\nline-height:9px;\ncolor:#00375C;\nfont-family:sans-serif;\n}\n\n.rtl .region-info,.ltr .region-info {\ntop:317px;\n}\n\n.rtl .region-info {\nright:100px;\ntext-align:left;\n}\n\n.ltr .region-info {\nleft:100px;\ntext-align:right;\n}\n\n.ctr .region-info .region-title {\nwidth:100%;\nmargin-top:0;\ntext-align:center;\n}\n\n.game-set .flags-sprite,.game-set .flags-bot-grey-flag,.game-set .flags-bot-lgt-grey-flag,.game-set .flags-bot-lrg-wht-flag,.game-set .flags-bot-med-wht-flag,.game-set .flags-br-black-top-flag,.game-set .flags-br-red-flag,.game-set .flags-br-red-top-flag,.game-set .flags-br-white-flag,.game-set .flags-br-white-top-flag,.game-set .flags-sm-black-top-flag,.game-set .flags-sm-red-bottom-flag,.game-set .flags-sm-red-top-flag,.game-set .flags-sm-white-bottom-flag,.game-set .flags-sm-white-top-flag,.game-set .flags-top-grey-flag,.game-set .flags-top-lgt-grey-flag,.game-set .flags-top-lrg-wht-flag,.game-set .flags-top-med-wht-flag {\nbackground:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/flags-sb5f0de5dd5.png) no-repeat;\n}\n\n.game-set .flags-bot-grey-flag {\nbackground-position:0 -210px;\nheight:15px;\nwidth:63px;\n}\n\n.game-set .flags-bot-lgt-grey-flag {\nbackground-position:0 -330px;\nheight:15px;\nwidth:63px;\n}\n\n.game-set .flags-bot-lrg-wht-flag {\nbackground-position:0 -300px;\nheight:15px;\nwidth:78px;\n}\n\n.game-set .flags-bot-med-wht-flag {\nbackground-position:0 -447px;\nheight:12px;\nwidth:69px;\n}\n\n.game-set .flags-br-black-top-flag {\nbackground-position:0 -120px;\nheight:15px;\nwidth:99px;\n}\n\n.game-set .flags-br-red-flag {\nbackground-position:0 0;\nheight:15px;\nwidth:99px;\n}\n\n.game-set .flags-br-red-top-flag {\nbackground-position:0 -30px;\nheight:15px;\nwidth:99px;\n}\n\n.game-set .flags-br-white-flag {\nbackground-position:0 -60px;\nheight:15px;\nwidth:99px;\n}\n\n.game-set .flags-br-white-top-flag {\nbackground-position:0 -90px;\nheight:15px;\nwidth:99px;\n}\n\n.game-set .flags-sm-black-top-flag {\nbackground-position:0 -180px;\nheight:15px;\nwidth:89px;\n}\n\n.game-set .flags-sm-red-bottom-flag {\nbackground-position:0 -150px;\nheight:15px;\nwidth:89px;\n}\n\n.game-set .flags-sm-red-top-flag {\nbackground-position:0 -270px;\nheight:15px;\nwidth:89px;\n}\n\n.game-set .flags-sm-white-bottom-flag {\nbackground-position:0 -474px;\nheight:12px;\nwidth:55px;\n}\n\n.game-set .flags-sm-white-top-flag {\nbackground-position:0 -501px;\nheight:12px;\nwidth:55px;\n}\n\n.game-set .flags-top-grey-flag {\nbackground-position:0 -240px;\nheight:15px;\nwidth:63px;\n}\n\n.game-set .flags-top-lgt-grey-flag {\nbackground-position:0 -360px;\nheight:15px;\nwidth:63px;\n}\n\n.game-set .flags-top-lrg-wht-flag {\nbackground-position:0 -390px;\nheight:15px;\nwidth:78px;\n}\n\n.game-set .flags-top-med-wht-flag {\nbackground-position:0 -420px;\nheight:12px;\nwidth:69px;\n}\n\n.team-info {\n-webkit-box-shadow:0 1px 3px 0 rgba(10,10,10,0.1);\n-moz-box-shadow:0 1px 3px 0 rgba(10,10,10,0.1);\nbox-shadow:0 1px 3px 0 rgba(10,10,10,0.1);\nclear:both;\nfont-weight:400;\nheight:26px;\nline-height:26px;\n}\n\n.team-info.info-bottom {\nmargin-top:2px;\n}\n\n.live .team-name,.live .team-score {\ncolor:#0079FF;\nfont-weight:700;\n}\n\n.canceled .team-name,.canceled .team-score,.postponed .team-name,.postponed .team-score,.suspended .team-name,.suspended .team-score {\ncolor:#888;\n}\n\n.team-name {\noverflow:hidden;\nwhite-space:nowrap;\nfloat:left;\nfont-size:11px;\npadding:0 2px;\n}\n\n.team-score {\nfont-weight:700;\nfont-family:TechwoodSlabW04,Rockwell,Georgia,serif;\nfont-size:12px;\nwidth:19px;\n}\n\n.game-time,.game-quarter {\nfloat:right;\ntext-align:left;\ntext-transform:capitalize;\nfont-size:9px;\nline-height:26px;\nright:0;\npadding-right:5px;\ncolor:#888;\nfont-weight:700;\n}\n\n.team-logo {\nfloat:left;\npadding:0 3px;\n}\n\n.show-logo .team-logo {\nwidth:24px;\n}\n\n.team-seed {\nfloat:left;\ntext-align:right;\nwidth:12px;\ncolor:#AAA;\nfont-size:10px;\nfont-weight:700;\n}\n\n.team-seed:after {\ncontent:'.';\nvisibility:hidden;\n}\n\n.game-sm .team-info.info-bottom,.game-sm .team-info.info-top {\nheight:32px;\nline-height:32px;\n}\n\n.game-sm .team-score {\npadding-left:2px;\n}\n\n.game-md .team-seed {\nheight:22px;\nwidth:10px;\nline-height:30px;\ntext-align:center;\npadding:0 1px;\n}\n\n.game-md .team-name {\nwidth:96px;\npadding:0;\n}\n\n.game-md .team-logo {\nheight:20px;\n}\n\n.game-md .team-logo img {\npadding:0 1px;\n}\n\n.game-md .game-time,.game-md .game-quarter {\nmargin-right:1px;\npadding-left:0;\nposition:absolute;\n}\n\n.game-lg .team-score {\nfont-size:14px;\n}\n\n.game-preview {\nwidth:44px;\ndirection:ltr;\nheight:50px;\nbackground:#FFF;\nright:0;\nposition:absolute;\nz-index:100;\nborder:8px solid #FFF;\nborder-bottom:0 solid #FFF;\nborder-top:3px solid #FFF;\nborder-left:0 solid #FFF;\nborder-right:0 solid #FFF;\ntext-align:center;\nline-height:14px;\ncolor:#888;\nfont-weight:700;\nfont-size:9px;\ndisplay:table;\n-webkit-border-radius:2px;\n-moz-border-radius:2px;\n-ms-border-radius:2px;\n-o-border-radius:2px;\nborder-radius:2px;\n}\n\n.game-preview .inner span {\ndisplay:inline-block;\nwhite-space:nowrap;\n}\n\n.game-preview .inner .network {\ndisplay:inline-block;\nwidth:100%;\n}\n\n.game-sm .game-preview,.game-lg .game-preview,.game-md .game-preview {\nheight:62px;\nline-height:14px;\n}\n\n.rtl .game-preview {\nright:auto;\nleft:0;\n}\n\n.live-top,.live-bottom {\nwhite-space:nowrap;\ndisplay:block;\ntext-transform:uppercase;\nz-index:9;\nposition:relative;\nheight:15px;\ncolor:#AAA;\nfont-weight:700;\ntext-align:center;\nmargin:0;\npadding:0;\n}\n\n.live-bottom {\nline-height:14px;\nfont-size:9px;\nwidth:78px;\ndirection:ltr;\n}\n\n.live-bottom .flags-bot-lrg-wht-flag {\nheight:12px;\n}\n\n.live-top {\nfont-size:10px;\nfont-family:TechwoodSlabW04,Rockwell,Georgia,serif;\nz-index:11;\ncolor:#FFF;\nline-height:16px;\n}\n\n.live-top a {\nz-index:11;\ncolor:#FFF;\ncursor:pointer;\ndisplay:block;\nline-height:14px;\n}\n\n#bracket-champ {\nwidth:200px;\nposition:relative;\nleft:50%;\ntop:85px;\nmargin-left:-100px;\ntext-align:center;\ndisplay:none;\n}\n\n#bracket-champ h3 {\ndisplay:inline-block;\nwidth:200px;\nmargin:0;\npadding:10px 0;\n}\n\n#bracket-champ .champion {\n-webkit-border-radius:2px;\n-moz-border-radius:2px;\n-ms-border-radius:2px;\n-o-border-radius:2px;\nborder-radius:2px;\n-webkit-box-sizing:border-box;\n-moz-box-sizing:border-box;\nbox-sizing:border-box;\n-webkit-box-shadow:0 2px 3px 1px rgba(10,10,10,0.1);\n-moz-box-shadow:0 2px 3px 1px rgba(10,10,10,0.1);\nbox-shadow:0 2px 3px 1px rgba(10,10,10,0.1);\nfont-family:TechwoodSlabW04,Rockwell,Georgia,serif;\ncolor:#0065A8;\nfont-size:16px;\ntext-align:center;\nbackground:#FFF;\ndisplay:block;\nmargin:0 auto;\npadding:5px 3px;\n}\n\n#bracket-final h3,#bracket-final h2 {\ntext-align:center;\nfont-family:TechwoodSlabW04,Rockwell,Georgia,serif;\nfont-weight:700;\nfont-size:14px;\ncolor:#00375C;\ntext-transform:uppercase;\nwhite-space:nowrap;\nmargin:0;\n}\n\n#bracket-final-rounds {\ntext-align:center;\nfont-family:HelveticaNeue-Light,\"Helvetica Neue Light\",\"Helvetica Neue\",Helvetica,Arial,\"Lucida Grande\",sans-serif;\nposition:relative;\ntop:-35px;\n}\n\n#bracket-final-rounds h3 {\ncolor:#666;\nposition:absolute;\nfont-family:HelveticaNeue-Light,\"Helvetica Neue Light\",\"Helvetica Neue\",Helvetica,Arial,\"Lucida Grande\",sans-serif;\nwidth:175px;\nheight:16px;\ntext-transform:inherit;\nfont-size:10px;\nmargin:0;\n}\n\n#bracket-final-rounds li {\ncolor:#666;\nposition:absolute;\nwidth:175px;\nline-height:12px;\nmargin:16px 0 0;\n}\n\n#bracket-final-rounds .ctr {\nleft:400px;\n}\n\n#bracket-final-rounds .left {\nleft:200px;\n}\n\n#bracket-final-rounds .right {\nright:200px;\n}\n\n#bracket-final-header {\nwidth:100%;\nposition:relative;\ndisplay:inline-block;\nmargin:0 auto;\n}\n\n#bracket-final-header .region-subtitle {\nwidth:100%;\ntext-align:center;\ncolor:#00375C;\ntext-transform:none;\nfont-size:12px;\n}\n\n#bracket-final-games {\nposition:relative;\ndisplay:inline-block;\n}\n\n#bracket-final-games .col-3 .live-top {\ndirection:rtl;\n}\n\n#bracket-final-games .col-3 .live-bottom {\ndirection:ltr;\nfloat:left;\n}\n\n#bracket-final.ctr .col-1 {\nleft:195px;\n}\n\n#bracket-final.ctr .col-2 {\nleft:385px;\n}\n\n.championship .live-top,.championship .live-bottom {\nfloat:none;\nwidth:100%;\n}\n\n#bracket-footer.current {\nbackground:#666;\n}\n\n#bracket-third {\nposition:absolute;\nwidth:180px;\nleft:50%;\nmargin-left:-90px;\nbottom:0;\nheight:100px;\n}\n\n#bracket-third #game802 {\ntop:0;\nleft:0;\n}\n\n#bracket-third h3 {\ntext-align:center;\nfont-family:TechwoodSlabW04,Rockwell,Georgia,serif;\nfont-weight:700;\nfont-size:13px;\ncolor:#888;\ntext-transform:uppercase;\nwhite-space:nowrap;\nmargin-top:-30px;\n}\n\n#bracket-first .region-info .region-title {\ntop:30px;\ncolor:#FFF;\nposition:absolute;\nmargin:0;\n}\n\n#bracket-first .region-info .region-subtitle {\ntop:55px;\ncolor:#FFF;\nposition:absolute;\nwidth:100%;\ntext-align:center;\ntext-transform:initial;\nfont-weight:700;\nmargin:0;\n}\n\n#bracket-first.ctr .col-1 {\nleft:35px;\n}\n\n#bracket-first.ctr .col-2 {\nleft:250px;\n}\n\n#bracket-first.ctr .col-3 {\nright:250px;\n}\n\n#bracket-first.ctr .col-4 {\nright:35px;\n}\n\n.regional-reference {\nfont-size:13px;\nfont-family:TechwoodSlabW04,Rockwell,Georgia,serif;\ncolor:#FFF;\nwidth:35px;\nposition:absolute;\ndisplay:block;\nfont-weight:700;\nmargin-top:30px;\ntext-align:center;\n}\n\n.regional-reference.game-2 {\nleft:205px;\n}\n\n.regional-reference.game-3 {\nright:205px;\n}\n\n#ncaa-bracket-social {\nwidth:130px;\ntext-align:center;\nposition:absolute;\nz-index:20;\nleft:435px;\ntop:70px;\n}\n\n#ncaa-bracket-social .timezone {\ntext-align:center;\nfont-size:12px;\nfont-weight:700;\ncolor:#00375C;\ndisplay:block;\nmargin-bottom:5px;\n}\n\n#ncaa-bracket-social .social-sprite,#ncaa-bracket-social .social-facebook-share,#ncaa-bracket-social .social-googleplus-share,#ncaa-bracket-social .social-print-bracket,#ncaa-bracket-social .social-twitter-share {\nbackground:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/social-s3debe29644.png) no-repeat;\n}\n\n#ncaa-bracket-social .social-facebook-share {\nbackground-position:0 -147px;\nheight:31px;\nwidth:31px;\n}\n\n#ncaa-bracket-social .social-googleplus-share {\nbackground-position:0 -55px;\nheight:31px;\nwidth:31px;\n}\n\n#ncaa-bracket-social .social-print-bracket {\nbackground-position:0 0;\nheight:40px;\nwidth:102px;\ndisplay:block;\ncursor:pointer;\ntext-indent:-119988px;\noverflow:hidden;\ntext-align:left;\nmargin:auto;\n}\n\n#ncaa-bracket-social .social-twitter-share {\nbackground-position:0 -101px;\nheight:31px;\nwidth:32px;\n}\n\n#ncaa-bracket-social #social-buttons {\nwidth:114px;\ndisplay:inline-block;\nmargin:auto;\n}\n\n#ncaa-bracket-social #social-buttons li a {\nmargin-right:10px;\nfloat:left;\n}\n\n#ncaa-bracket-social #social-buttons li a.last {\nmargin-right:0;\n}\n\n.network .networks-gray-fox,.network .networks-gray-fx,.network .networks-gray-lhn,.network .networks-gray-trutv {\nmargin-top:3px;\n}\n\n.network .networks-gray-sprite,.network .networks-gray-abc,.network .networks-gray-bet,.network .networks-gray-bigten,.network .networks-gray-cbs,.network .networks-gray-cbssports,.network .networks-gray-espn,.network .networks-gray-espn2,.network .networks-gray-espn3,.network .networks-gray-espnu,.network .networks-gray-fox,.network .networks-gray-fx,.network .networks-gray-lhn,.network .networks-gray-nbc,.network .networks-gray-nbcsports,.network .networks-gray-tbs,.network .networks-gray-tnt,.network .networks-gray-trutv {\nbackground:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/networks-gray-s035d117bbe.png) no-repeat;\n}\n\n.network .networks-gray-abc {\nbackground-position:0 -228px;\nheight:16px;\nwidth:17px;\n}\n\n.network .networks-gray-bet {\nbackground-position:0 -203px;\nheight:10px;\nwidth:28px;\n}\n\n.network .networks-gray-bigten {\nbackground-position:0 0;\nheight:14px;\nwidth:29px;\n}\n\n.network .networks-gray-cbs {\nbackground-position:0 -137px;\nheight:17px;\nwidth:17px;\n}\n\n.network .networks-gray-cbssports {\nbackground-position:0 -57px;\nheight:9px;\nwidth:40px;\n}\n\n.network .networks-gray-espn {\nbackground-position:0 -112px;\nheight:10px;\nwidth:40px;\n}\n\n.network .networks-gray-espn2 {\nbackground-position:0 -457px;\nheight:8px;\nwidth:40px;\n}\n\n.network .networks-gray-espn3 {\nbackground-position:0 -434px;\nheight:8px;\nwidth:40px;\n}\n\n.network .networks-gray-espnu {\nbackground-position:0 -81px;\nheight:16px;\nwidth:17px;\n}\n\n.network .networks-gray-fox {\nbackground-position:0 -259px;\nheight:13px;\nwidth:28px;\n}\n\n.network .networks-gray-fx {\nbackground-position:0 -373px;\nheight:12px;\nwidth:22px;\n}\n\n.network .networks-gray-lhn {\nbackground-position:0 -345px;\nheight:13px;\nwidth:22px;\n}\n\n.network .networks-gray-nbc {\nbackground-position:0 -29px;\nheight:13px;\nwidth:22px;\n}\n\n.network .networks-gray-nbcsports {\nbackground-position:0 -400px;\nheight:19px;\nwidth:25px;\n}\n\n.network .networks-gray-tbs {\nbackground-position:0 -313px;\nheight:17px;\nwidth:16px;\n}\n\n.network .networks-gray-tnt {\nbackground-position:0 -169px;\nheight:19px;\nwidth:19px;\n}\n\n.network .networks-gray-trutv {\nbackground-position:0 -287px;\nheight:11px;\nwidth:29px;\n}\n\n#rounds .round2 {\nwidth:195px;\npadding:5px 15px;\n}\n\n#rounds .round3 {\nwidth:67px;\n}\n\n#rounds .round4 {\nwidth:70px;\n}\n\n#rounds .round5 {\nwidth:76px;\n}\n\n#rounds .round6 {\nwidth:184px;\n}\n\n#bracket-bottom {\nbackground:url(/dr/ncaa/ncaa7/release/sites/all/modules/custom/live_data/images/brackets/bg/ff-background2014-bottom.png);\nbackground-position:165px 40px;\nbackground-repeat:no-repeat;\n}\n\n.ui-helper-hidden,.ui-resizable-disabled .ui-resizable-handle,.ui-resizable-autohide .ui-resizable-handle,#nav-favorites-footer .favsie-footer-buttons a.fav-footer-button.button-cancel-signin,#ncaa-mobile-drop-arrow,#bracket_popup,div.gig-share-sidebar {\ndisplay:none;\n}\n\n.ui-widget-content a,#bracket-popup .region.status .tier.contest .game-status .final {\ncolor:#333;\n}\n\n.ui-widget-header a,.ui-state-error a,.ui-widget-content .ui-state-error a,.ui-widget-header .ui-state-error a,.ui-state-error-text,.ui-widget-content .ui-state-error-text,.ui-widget-header .ui-state-error-text,#ncaa-nav-primary-navigation nav ul span.rightlinks li.favs:hover h2,#ncaa-nav-primary-navigation nav ul span.rightlinks li.favs.active h2,#ncaa-nav-primary-navigation nav ul span.rightlinks li.favs:hover h2 a,#ncaa-nav-primary-navigation nav ul span.rightlinks li.favs.active h2 a,#ncaa-nav-primary-navigation nav .parentItem:hover h2 span,#bracket-popup .section-tabs .sectionGames li.selected .score {\ncolor:#fff;\n}\n\n.ui-priority-primary,.ui-widget-content .ui-priority-primary,.ui-widget-header .ui-priority-primary,.winner * {\nfont-weight:700;\n}\n\n.ui-state-hover .ui-icon,.ui-state-focus .ui-icon,.ui-state-active .ui-icon {\nbackground-image:url(http://i.turner.ncaa.com/dr/ncaa/ncaa7/release/sites/all/modules/custom/ncaa_admin/images/ui-icons_454545_256x240.png);\n}\n\n.ui-icon-seek-start,.ui-icon-seek-first {\nbackground-position:-80px -160px;\n}\n\n.ui-corner-all,.ui-corner-top,.ui-corner-left,.ui-corner-tl,#media-browser-tab.ui-corner-all,#media-browser-tab.ui-corner-top,#media-browser-tab.ui-corner-left,#media-browser-tab.ui-corner-tl {\n-moz-border-radius-topleft:5px;\n-webkit-border-top-left-radius:5px;\n-khtml-border-top-left-radius:5px;\nborder-top-left-radius:5px;\n}\n\n.ui-corner-all,.ui-corner-top,.ui-corner-right,.ui-corner-tr,#media-browser-tab.ui-corner-all,#media-browser-tab.ui-corner-top,#media-browser-tab.ui-corner-right,#media-browser-tab.ui-corner-tr {\n-moz-border-radius-topright:5px;\n-webkit-border-top-right-radius:5px;\n-khtml-border-top-right-radius:5px;\nborder-top-right-radius:5px;\n}\n\n.ui-resizable,.asset-atom-content,#ncaa-nav-primary-navigation .button-wrap,.bracket-region {\nposition:relative;\n}\n\n.ui-dialog .ui-dialog-titlebar-close:hover,.ui-dialog .ui-dialog-titlebar-close:focus,#ncaa-nav-primary-navigation nav li.shop-nav h2,#ncaa-nav-primary-navigation nav.tickets_nav.content-panel li,#ncaa-nav-primary-navigation nav.shop_nav.content-panel li,#ncaa-nav-primary-navigation nav.video_nav.content-panel li {\npadding:0;\n}\n\n.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset,#ncaa-nav-primary-navigation .ncaa-nav li#shop,#ncaa-nav-primary-navigation .ncaa-nav li#search,.ltr .live-bottom,.ltr .watch-live-bottom,.ctr .live-bottom,.ctr .watch-live-bottom,.third-place .live-bottom,.third-place .watch-live-bottom {\nfloat:right;\n}\n\n.ui-tabs .ui-tabs-nav li.ui-state-hover,.ui-tabs .ui-tabs-nav li.ui-state-active,.ui-tabs .ui-tabs-nav li.ui-tabs-selected,#ncaa-nav-primary-navigation nav.championship_nav li:first-child {\nborder:none;\n}\n\n.ui-tabs .ui-tabs-nav li a,.ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a,.ps-container.ncaa .ps-drop .ps-results li.active-result,#ncaa-nav-primary-navigation .favsieNavButton,.game-set.has-data {\ncursor:pointer;\n}\n\n.ui-tabs .ui-tabs-hide,.mobileOnly {\ndisplay:none!important;\n}\n\n.ui-button-text-only .ui-button-text,input.ui-button {\npadding:.4em 1em;\n}\n\n.ui-button-text-icon-secondary .ui-button-icon-secondary,.ui-button-text-icons .ui-button-icon-secondary,.ui-button-icons-only .ui-button-icon-secondary,.ui-button-text-icons .ui-button-icon-secondary,.ui-button-icons-only .ui-button-icon-secondary {\nright:.5em;\n}\n\n#ncaa-nav-primary-navigation nav ul span.rightlinks li.favs:hover,#ncaa-nav-primary-navigation nav ul span.rightlinks li.favs.active,#ncaa-nav-primary-navigation nav .parentItem:hover,#ncaa-nav-primary-navigation .button:hover {\nbackground-color:#00375b;\n}\n\n#nav-favorites .favs-container,.network .networks-gray-cbssports,.network .networks-gray-espn,.network .networks-gray-espn2,.network .networks-gray-espn3 {\nmargin-top:5px;\n}\n\n#nav-favorites-workflow_content .favsie-marketing-text input,#ncaa-nav-primary-navigation .gender a:first-child {\nmargin-right:5px;\n}\n\n.asset-atom-content.block-640x360 object,.school_nav .search-schools label,.rtl .live-bottom,.rtl .watch-live-bottom {\nfloat:left;\n}\n\n.asset-atom-content:hover .atom-edit,#ncaa-nav-primary-navigation nav.content-panel.active,.sports_nav .favAreaWrapper,.school_nav .favAreaWrapper,.no-js #search #search-term,.champ-banner,.game-time .active,.game-quarter .active,#bracket-popup .marketing a,#bracket-popup .region.gamecenter a,#bracket-popup .region.recap a {\ndisplay:block;\n}\n\n.sport-subnav ul.nav-items li.active,.sport-subnav ul.nav-items li.active a {\ncolor:#002948;\n}\n\n.ncaa-nav-primary ul span.leftlinks li[data-menu='sports_nav'],.ncaa-nav-primary nav[data-menu='sports_nav'] header,#ncaa-nav-primary-navigation .button.mens,.col-1,.regional-reference.game-1,#bracket-popup .region.status .team.away {\nleft:0;\n}\n\n#ncaa-nav-primary-navigation nav.content-panel .ncaa-nav-subtitle,#ncaa-nav-primary-navigation nav.school_nav .ncaa-nav-subtitle,#ncaa-nav-primary-navigation nav.school_nav li.ncaa-nav-subtitle h2,.school_nav .search-schools label {\ncolor:#00375b;\nfont-family:TechwoodSlabW04,Rockwell,Georgia,serif;\nfont-size:17px;\nline-height:21px;\nfont-weight:700;\nmargin:5px 0 10px;\n}\n\n#ncaa-nav-primary-navigation nav.sports_nav.content-panel header,#ncaa-nav-primary-navigation nav.championship_nav.content-panel header,#ncaa-nav-primary-navigation nav.video_nav.content-panel header,#ncaa-nav-primary-navigation nav.tickets_nav.content-panel header,#ncaa-nav-primary-navigation nav.shop_nav.content-panel header {\nleft:-1px;\n}\n\n#ncaa-nav-primary-navigation nav.shop_nav.content-panel,#bracket-final.ctr .col-3 {\nleft:595px;\n}\n\n#ncaa-nav-primary-navigation .edit-nav-link:hover,#ncaa-nav-primary-navigation nav.content-panel .ncaa-nav-highlights a.edit-nav-link:hover,.team-info.info-top,.team-info.info-bottom {\nbackground:#FFF;\n}\n\n#ncaa-nav-primary-navigation .button.womens,.regional-reference.game-4,#bracket-popup .region.status .team.home {\nright:0;\n}\n\n#ncaa-nav-primary-navigation nav.content-panel .ncaa-nav-highlights,#ncaa-nav-primary-navigation nav.content-panel .ncaa-nav-highlights ul,.school_nav .school_nav-search,#bracket-champ .champion p {\nmargin:0;\n}\n\n#ncaa-nav-primary-navigation nav.championship_nav li a,#ncaa-nav-primary-navigation nav.championship_nav li .championship-logo,#ncaa-nav-primary-navigation nav.championship_nav li h2,.game-preview .inner {\ndisplay:table-cell;\nvertical-align:middle;\n}\n\n#ncaa-nav-primary-navigation nav.championship_nav li:hover h2,.team-info.winner,.pre .team-name,.pre .team-score {\ncolor:#00375C;\n}\n\n.round-table .round-row .round-cell.final,#bracket-popup .section-tabs {\ntext-align:center;\n}\n\n.round-table .round-row .round-cell.right,.ltr .region-info .region-title,.ctr .region-info .region-title,.third-place .region-info .region-title,.ltr .region-info li,.ctr .region-info li,.third-place .region-info li,#bracket-popup .region.gamecenter .story {\ntext-align:right;\n}\n\n.rtl .region-info .region-title,.rtl .region-info li {\ntext-align:left;\ndirection:ltr;\n}\n\n.rtl .team-name,.ltr,.ctr,.third-place,.ltr .team-name,.ctr .team-name,.third-place .team-name {\ndirection:ltr;\n}\n\n.rtl .team-name,.rtl .team-seed,.ltr .game-time,.ltr .game-quarter,.ctr .game-time,.ctr .game-quarter,.third-place .game-time,.third-place .game-quarter {\nfloat:right;\ntext-align:left;\n}\n\n.third-place .live-top a,.third-place .live-top div,.championship .live-top a,.championship .live-bottom a,.championship .live-top div,.championship .live-bottom div {\nmargin:auto;\n}\n\n.game-set,.region-info {\nposition:absolute;\n}\n\n.col-1.pos-1,#bracket-final.ctr .col-1.pos-1,#bracket-final.ctr .col-2.pos-1,#bracket-final.ctr .col-3.pos-1,#bracket-first.ctr .col-1.pos-1,#bracket-first.ctr .col-2.pos-1,#bracket-first.ctr .col-3.pos-1,#bracket-first.ctr .col-4.pos-1 {\ntop:0;\n}\n\n.ctr .region-info,.ctr .region-info .region-subtitle {\nwidth:100%;\ntext-align:center;\n}\n\n.team-logo img,#bracket-champ .champion img {\nvertical-align:middle;\n}\n\n.game-md .team-info.info-bottom,.game-md .team-info.info-top,.game-lg .team-info.info-bottom,.game-lg .team-info.info-top {\nfont-size:10px;\nheight:32px;\nline-height:32px;\n}\n\n.game-lg .team-seed,#bracket-popup .region.status .network {\nheight:33px;\nline-height:33px;\n}\n\n.live-top a:hover,.live-top a:focus,.live-top a:visited,.live-top a:active,#bracket-popup .region.gamecenter .link.highlights a:hover,#bracket-popup .region.gamecenter .link.story a:hover {\ntext-decoration:none;\ncolor:#FFF;\n}\n\n#bracket-final-header h2,#bracket-final-header h3 {\nmargin:-10px 0 0;\npadding:0 0 5px;\n}\n\n#bracket-final-header h2.with-subtitle,#bracket-final-header h3.with-subtitle {\nmargin:-30px 0 0;\n}\n\n.container {\nzoom:1;\nposition:relative;\nwidth:1000px;\nmargin:0 auto;\npadding:0 14px;\n}\n\nbody {\nfont:14px/1.5em HelveticaNeue,\"Helvetica Neue\",Helvetica,Arial,sans-serif;\ncolor:#444;\n-webkit-font-smoothing:antialiased;\n-webkit-text-size-adjust:100%;\nbackground-repeat:no-repeat;\nbackground-color:#002647; /*change this*/\nbackground-position:top center;\n}\n\nbody .container {\nposition:relative;\nwidth:1000px;\nmargin:0 auto;\npadding:0;\n}\n\n.game-is-live {\n  -webkit-box-shadow: 0 0 5px 2px darkgray;\n  -moz-box-shadow: 0 0 5px 2px darkgray;\n  box-shadow: 0 0 5px 2px darkgray;\n}\n",
 			"file": "app/assets/stylesheets/bracket.css",
-			"file_size": 25900,
-			"file_write_time": 130692196799092175,
 			"settings":
 			{
-				"buffer_size": 25902,
+				"buffer_size": 25965,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 465,
 				"line_ending": "Unix"
 			}
 		}
@@ -211,6 +192,7 @@
 		"/home/stumpy/Development/Projects/grid_pool",
 		"/home/stumpy/Development/Projects/grid_pool/app",
 		"/home/stumpy/Development/Projects/grid_pool/app/assets",
+		"/home/stumpy/Development/Projects/grid_pool/app/assets/images",
 		"/home/stumpy/Development/Projects/grid_pool/app/assets/javascripts",
 		"/home/stumpy/Development/Projects/grid_pool/app/assets/stylesheets",
 		"/home/stumpy/Development/Projects/grid_pool/app/controllers",
@@ -224,12 +206,16 @@
 	],
 	"file_history":
 	[
+		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/bracket_old.html.erb",
+		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/_empty_game.html.erb",
+		"/home/stumpy/Development/Projects/grid_pool/fake_response.txt",
+		"/home/stumpy/Development/Projects/grid_pool/app/models/game.rb",
+		"/home/stumpy/Development/Projects/grid_pool/app/assets/stylesheets/bracket_old.css",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/_game_old.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/controllers/pages_controller.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/faq.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/assets/javascripts/application.js",
 		"/home/stumpy/Development/Projects/grid_pool/app/assets/stylesheets/application.css.scss",
-		"/home/stumpy/Development/Projects/grid_pool/app/assets/stylesheets/bracket_old.css",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/layouts/_header.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/grid.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/_game.html.erb",
@@ -237,7 +223,6 @@
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/_participantWithNoResults.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/_participantWithResults.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/config/application.rb",
-		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/_empty_game.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/layouts/_wait.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/layouts/application.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/_region.html.erb",
@@ -250,7 +235,6 @@
 		"/home/stumpy/Development/Projects/grid_pool/config/routes.rb",
 		"/home/stumpy/Development/Projects/grid_pool/db/seeds.rb",
 		"/home/stumpy/Development/Projects/grid_pool/Gemfile",
-		"/home/stumpy/Development/Projects/grid_pool/app/models/game.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/helpers/application_helper.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/models/participant.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/models/square.rb",
@@ -295,6 +279,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"bracket-fo",
+			"region-ti",
+			".live-bottom",
+			"live-bo",
+			"-bottom",
+			"seed",
 			"i",
 			"background",
 			"bracket-basketball-men-d1",
@@ -367,7 +357,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -383,8 +373,8 @@
 						"selection":
 						[
 							[
-								3153,
-								3153
+								2360,
+								2360
 							]
 						],
 						"settings":
@@ -395,10 +385,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 306.0,
+						"translation.y": 762.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -407,15 +397,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 75067,
+						"buffer_size": 3256,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								716,
-								716
+								2379,
+								2379
 							]
 						],
 						"settings":
@@ -426,10 +416,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 661.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -438,197 +428,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1231,
+						"buffer_size": 1206,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1231,
-								1231
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/views/pages/_game.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1743,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								41,
-								41
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/controllers/application_controller.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5331,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1186,
-								1186
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 493.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "fake_response.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 145402,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								145402,
-								145402
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 82635.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/views/pages/_empty_game.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 485,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								452,
-								452
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/assets/stylesheets/bracket_old.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 26141,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								26004,
-								26004
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 21940.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "app/views/pages/bracket_old.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 17822,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								914,
-								914
+								245,
+								245
 							]
 						],
 						"settings":
@@ -646,20 +454,110 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "app/assets/stylesheets/bracket.css",
+					"buffer": 3,
+					"file": "app/views/pages/_game.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 25902,
+						"buffer_size": 1604,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								25764,
-								25764
+								1116,
+								1116
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 213.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/pages_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2364,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1262,
+								1262
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/controllers/application_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5331,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								972,
+								972
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 396.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/assets/stylesheets/bracket.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 25965,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								25481,
+								25481
 							]
 						],
 						"settings":
@@ -670,10 +568,39 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 21812.0,
+						"translation.y": 21850.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/views/layouts/application.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 465,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								120,
+								120
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
