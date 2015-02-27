@@ -7,7 +7,7 @@
         <% if @participants_with_squares.any? %>
           <% if @results.count < 63 %>
             <div>
-              <% last_updated_at = @years.find_by(year: $year).results_last_updated_at %>
+              <% last_updated_at = @year.results_last_updated_at %>
               <% if !last_updated_at.blank? %>
                 <%= last_updated_at.strftime('Last updated: %m/%d/%Y at %I:%M %p') %>
               <% end %>
@@ -17,11 +17,10 @@
             </div>
           <% end %>
           <% @participants_with_squares.each do |p_w_sq| %>
-            <% participant = @participants.find(p_w_sq.id) %>
-
             <% resultCounter = 0 %>
-            <% totalPaid = @participant_squares.where(participant_id: participant.id).count * 5 %>
             <% totalWon = 0 %>
+            <% participant = @participants.find(p_w_sq.id) %>
+            <% totalPaid = @participant_squares.where(participant_id: participant.id).count * @year.square_cost %>
             <% participant_results = @results.where(participant_id: participant.id) %>
 
             <% winning_rounds_text = "&nbsp;".html_safe %>

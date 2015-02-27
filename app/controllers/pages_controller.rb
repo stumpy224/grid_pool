@@ -34,6 +34,7 @@ class PagesController < ApplicationController
     @payouts = Payout.where(year: $year)
     @results = Result.where(year: $year)
     @years = Year.all
+    @year = Year.find_by(year: $year)
 
     respond_with(@participants_with_squares, @participant_squares, @results)
   end
@@ -59,6 +60,11 @@ class PagesController < ApplicationController
     @loser_digits = @years.where(year: $year).first.loser_digits
   end
 
+  def faq
+    set_global_year
+    @year = Year.find_by(year: $year).year
+  end
+
   private
 
     def set_global_year
@@ -77,7 +83,7 @@ class PagesController < ApplicationController
       else
         tourney_games.each do |g|
           game = translate_game_info(g)
-          create_new_result_if_necessary(game) if (game.game_over? and game.round != '1')
+          create_new_result_if_necessary(game) if (game.game_over?)
         end
       end
     end

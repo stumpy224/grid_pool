@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150211035308) do
+ActiveRecord::Schema.define(version: 20150227020732) do
 
   create_table "participant_squares", force: :cascade do |t|
     t.integer  "participant_id"
@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20150211035308) do
     t.string   "loser_digits"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+    t.integer  "square_cost"
   end
 
 end

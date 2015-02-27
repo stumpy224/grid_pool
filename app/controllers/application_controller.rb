@@ -124,8 +124,8 @@ class ApplicationController < ActionController::Base
   end
 
   def create_new_result_if_necessary(game)
-    if @@results.find_by(game_id: game.game_id).blank?
-      create_new_result(game)
+    if ($year >= "2015" or ($year <= "2014" and game.round != "1"))
+      create_new_result(game) if @@results.find_by(game_id: game.game_id).blank?
     end
   end
 
