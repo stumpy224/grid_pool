@@ -69,16 +69,20 @@
                       </div>
                       <div class="form-group">
                         <label>Profit</label>
+                        
                         <% profit = totalWon - totalPaid %>
+                        <% profit_style = "" %>
                         <% if profit > 0 %>
-                          <label style="font-weight:normal;color:green;">
+                          <% profit_style = "font-weight:normal;color:green;" %>
                         <% elsif profit < 0 %>
-                          <label style="font-weight:normal;color:red;">
+                          <% profit_style = "font-weight:normal;color:red;" %>
                         <% else %>
-                          <label style="font-weight:normal;">
+                          <% profit_style = "font-weight:normal;" %>
                         <% end %>
+
+                        <%= content_tag :label, style: profit_style do %>
                           $<%= profit %>
-                          </label>
+                        <% end %>
                       </div>
                     </form>
                   </div>
@@ -95,7 +99,7 @@
           <div class="dropdown">
             <div class="btn-group">
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-              Select Year <span class="caret"></span>
+                Select Year <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" role="menu">
                 <% Year.order(year: :desc).each do |y| %>

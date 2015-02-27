@@ -63,7 +63,7 @@
 			"file": "app/views/pages/results.html.erb",
 			"settings":
 			{
-				"buffer_size": 4785,
+				"buffer_size": 4778,
 				"line_ending": "Unix"
 			}
 		},
@@ -95,7 +95,31 @@
 			"file": "app/controllers/pages_controller.rb",
 			"settings":
 			{
-				"buffer_size": 2364,
+				"buffer_size": 2460,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/pages/faq.html.erb",
+			"settings":
+			{
+				"buffer_size": 9227,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 1855,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "db/seeds.rb",
+			"settings":
+			{
+				"buffer_size": 3797,
 				"line_ending": "Unix"
 			}
 		},
@@ -103,7 +127,33 @@
 			"file": "app/controllers/application_controller.rb",
 			"settings":
 			{
-				"buffer_size": 5331,
+				"buffer_size": 5395,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/game.rb",
+			"settings":
+			{
+				"buffer_size": 2182,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 277 files for \"game_over\"\n\n/home/stumpy/Development/Projects/grid_pool/app/controllers/application_controller.rb:\n   93  \n   94      g.game_state == 'LIVE' ? g.game_is_live = true : g.game_is_live = false\n   95:     g.game_state == 'FINAL' ? g.game_over = true : g.game_over = false\n   96      \n   97      if g.game_is_live?\n   ..\n  106      end\n  107  \n  108:     if g.game_over?\n  109        winner_digit = g.team_on_top_is_winner? ? g.team_on_top_score.to_s.last(1) : g.team_on_bottom_score.to_s.last(1)\n  110        loser_digit = g.team_on_top_is_winner? ? g.team_on_bottom_score.to_s.last(1) : g.team_on_top_score.to_s.last(1)\n\n/home/stumpy/Development/Projects/grid_pool/app/controllers/pages_controller.rb:\n   80            byebug\n   81            game = translate_game_info(g)\n   82:           create_new_result_if_necessary(game) if (game.game_over?)\n   83          end\n   84        end\n\n/home/stumpy/Development/Projects/grid_pool/app/models/game.rb:\n    5      :game_state,\n    6      :game_is_live,\n    7:     :game_over,\n    8      :round,\n    9      :team_on_top_seed,\n   ..\n   30      @game_state = attributes[:game_state]\n   31      @game_is_live = attributes[:game_is_live]\n   32:     @game_over = attributes[:game_over]\n   33      @round = attributes[:round]\n   34      @team_on_top_seed = attributes[:team_on_top_seed]\n   ..\n   54    end\n   55  \n   56:   def game_over?\n   57:     !!@game_over\n   58    end\n   59  \n\n9 matches across 3 files\n\n\nSearching 277 files for \"game_over\"\n\n/home/stumpy/Development/Projects/grid_pool/app/controllers/application_controller.rb:\n   93  \n   94      g.game_state == 'LIVE' ? g.game_is_live = true : g.game_is_live = false\n   95:     g.game_state == 'FINAL' ? g.game_over = true : g.game_over = false\n   96      \n   97      if g.game_is_live?\n\n/home/stumpy/Development/Projects/grid_pool/app/controllers/pages_controller.rb:\n   80            byebug\n   81            game = translate_game_info(g)\n   82:           create_new_result_if_necessary(game) if (game.game_over?)\n   83          end\n   84        end\n\n/home/stumpy/Development/Projects/grid_pool/app/models/game.rb:\n    5      :game_state,\n    6      :game_is_live,\n    7:     :game_over,\n    8      :round,\n    9      :team_on_top_seed,\n   ..\n   30      @game_state = attributes[:game_state]\n   31      @game_is_live = attributes[:game_is_live]\n   32:     @game_over = attributes[:game_over]\n   33      @round = attributes[:round]\n   34      @team_on_top_seed = attributes[:team_on_top_seed]\n   ..\n   54    end\n   55  \n   56:   def game_over?\n   57:     !!@game_over\n   58    end\n   59  \n\n8 matches across 3 files\n\n\nSearching 277 files for \"game_over\"\n\n/home/stumpy/Development/Projects/grid_pool/app/controllers/pages_controller.rb:\n   80            byebug\n   81            game = translate_game_info(g)\n   82:           create_new_result_if_necessary(game) if (game.game_over?)\n   83          end\n   84        end\n\n/home/stumpy/Development/Projects/grid_pool/app/models/game.rb:\n    5      :game_state,\n    6      :game_is_live,\n    7:     :game_over,\n    8      :round,\n    9      :team_on_top_seed,\n   ..\n   30      @game_state = attributes[:game_state]\n   31      @game_is_live = attributes[:game_is_live]\n   32:     @game_over = attributes[:game_over]\n   33      @round = attributes[:round]\n   34      @team_on_top_seed = attributes[:team_on_top_seed]\n   ..\n   54    end\n   55  \n   56:   def game_over?\n   57:     !!@game_over\n   58    end\n   59  \n\n6 matches across 2 files\n\n\nSearching 277 files for \"game_over\"\n\n/home/stumpy/Development/Projects/grid_pool/app/models/game.rb:\n    5      :game_state,\n    6      :game_is_live,\n    7:     :game_over,\n    8      :round,\n    9      :team_on_top_seed,\n   ..\n   30      @game_state = attributes[:game_state]\n   31      @game_is_live = attributes[:game_is_live]\n   32:     @game_over = attributes[:game_over]\n   33      @round = attributes[:round]\n   34      @team_on_top_seed = attributes[:team_on_top_seed]\n   ..\n   54    end\n   55  \n   56:   def game_over?\n   57:     !!@game_over\n   58    end\n   59  \n\n5 matches in 1 file\n\n\nSearching 277 files for \"byebug\"\n\n/home/stumpy/Development/Projects/grid_pool/Gemfile:\n   36  \n   37  group :development, :test do\n   38:   # Call 'byebug' anywhere in the code to stop execution and get a debugger console\n   39:   gem 'byebug'\n   40  \n   41    # Access an IRB console on exception pages or by using <%= console %> in views\n\n/home/stumpy/Development/Projects/grid_pool/Gemfile.lock:\n   46        sass (~> 3.2)\n   47      builder (3.2.2)\n   48:     byebug (3.5.1)\n   49        columnize (~> 0.8)\n   50        debugger-linecache (~> 1.2)\n   ..\n  166    autoprefixer-rails\n  167    bootstrap-sass (~> 3.2.0)\n  168:   byebug\n  169    coffee-rails (~> 4.1.0)\n  170    jbuilder (~> 2.0)\n\n/home/stumpy/Development/Projects/grid_pool/app/controllers/application_controller.rb:\n  125  \n  126    def create_new_result_if_necessary(game)\n  127:     byebug\n  128      if ($year >= \"2015\" or ($year <= \"2014\" and game.round != \"1\"))\n  129        create_new_result(game) if @@results.find_by(game_id: game.game_id).blank?\n  ...\n  132  \n  133    def create_new_result(game)\n  134:     byebug\n  135      if not game.square_winner_id.blank?\n  136        Result.create!(\n\n/home/stumpy/Development/Projects/grid_pool/app/controllers/pages_controller.rb:\n   78        else\n   79          tourney_games.each do |g|\n   80:           byebug\n   81            game = translate_game_info(g)\n   82            create_new_result_if_necessary(game) if (game.over?)\n\n7 matches across 4 files\n\n\nSearching 277 files for \"byebug\"\n\n/home/stumpy/Development/Projects/grid_pool/Gemfile:\n   36  \n   37  group :development, :test do\n   38:   # Call 'byebug' anywhere in the code to stop execution and get a debugger console\n   39:   gem 'byebug'\n   40  \n   41    # Access an IRB console on exception pages or by using <%= console %> in views\n\n/home/stumpy/Development/Projects/grid_pool/Gemfile.lock:\n   46        sass (~> 3.2)\n   47      builder (3.2.2)\n   48:     byebug (3.5.1)\n   49        columnize (~> 0.8)\n   50        debugger-linecache (~> 1.2)\n   ..\n  166    autoprefixer-rails\n  167    bootstrap-sass (~> 3.2.0)\n  168:   byebug\n  169    coffee-rails (~> 4.1.0)\n  170    jbuilder (~> 2.0)\n\n/home/stumpy/Development/Projects/grid_pool/app/controllers/pages_controller.rb:\n   78        else\n   79          tourney_games.each do |g|\n   80:           byebug\n   81            game = translate_game_info(g)\n   82            create_new_result_if_necessary(game) if (game.over?)\n\n5 matches across 3 files\n",
+			"settings":
+			{
+				"buffer_size": 6584,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1663,
 				"line_ending": "Unix"
 			}
 		},
@@ -214,6 +264,8 @@
 	],
 	"file_history":
 	[
+		"/home/stumpy/Development/Projects/grid_pool/app/models/year.rb",
+		"/home/stumpy/Development/Projects/grid_pool/db/migrate/20150227020732_add_square_cost_to_year.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/bracket_old.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/_empty_game.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/fake_response.txt",
@@ -246,7 +298,6 @@
 		"/home/stumpy/Development/Projects/grid_pool/app/helpers/application_helper.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/models/participant.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/models/square.rb",
-		"/home/stumpy/Development/Projects/grid_pool/app/models/year.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/models/result.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/models/region.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/models/payout.rb",
@@ -287,6 +338,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"byebug",
+			"game_over",
+			"byebug",
+			"translate_game_info",
+			"get_tourney_games",
+			"translate_game_info",
+			"create_new_result",
+			"create_new_result_if_necessary",
 			"bracket-fo",
 			"region-ti",
 			".live-bottom",
@@ -365,7 +424,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -374,15 +433,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4785,
+						"buffer_size": 4778,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2360,
-								2360
+								1192,
+								1192
 							]
 						],
 						"settings":
@@ -393,7 +452,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 762.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 8,
@@ -427,7 +486,7 @@
 						"translation.y": 661.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -458,7 +517,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
@@ -488,7 +547,7 @@
 						"translation.y": 213.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
@@ -497,15 +556,74 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2364,
+						"buffer_size": 2460,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1262,
-								1262
+								1879,
+								1879
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 634.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/pages/faq.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9227,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6261,
+								6261
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2830.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "config/routes.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1855,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								177,
+								177
 							]
 						],
 						"settings":
@@ -518,24 +636,52 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "app/controllers/application_controller.rb",
+					"buffer": 7,
+					"file": "db/seeds.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5331,
+						"buffer_size": 3797,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								972,
-								972
+								2026,
+								2026
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 612.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/controllers/application_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5395,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4623,
+								4623
 							]
 						],
 						"settings":
@@ -545,14 +691,277 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 396.0,
+						"translation.y": 2067.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/models/game.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2182,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1795,
+								1795
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 655.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6584,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										254,
+										263
+									],
+									[
+										275,
+										284
+									],
+									[
+										380,
+										389
+									],
+									[
+										858,
+										867
+									],
+									[
+										1033,
+										1042
+									],
+									[
+										1213,
+										1222
+									],
+									[
+										1237,
+										1246
+									],
+									[
+										1388,
+										1397
+									],
+									[
+										1413,
+										1422
+									],
+									[
+										1726,
+										1735
+									],
+									[
+										1747,
+										1756
+									],
+									[
+										2023,
+										2032
+									],
+									[
+										2198,
+										2207
+									],
+									[
+										2378,
+										2387
+									],
+									[
+										2402,
+										2411
+									],
+									[
+										2553,
+										2562
+									],
+									[
+										2578,
+										2587
+									],
+									[
+										2889,
+										2898
+									],
+									[
+										3064,
+										3073
+									],
+									[
+										3244,
+										3253
+									],
+									[
+										3268,
+										3277
+									],
+									[
+										3419,
+										3428
+									],
+									[
+										3444,
+										3453
+									],
+									[
+										3666,
+										3675
+									],
+									[
+										3846,
+										3855
+									],
+									[
+										3870,
+										3879
+									],
+									[
+										4021,
+										4030
+									],
+									[
+										4046,
+										4055
+									],
+									[
+										4248,
+										4254
+									],
+									[
+										4336,
+										4342
+									],
+									[
+										4564,
+										4570
+									],
+									[
+										4730,
+										4736
+									],
+									[
+										4954,
+										4960
+									],
+									[
+										5186,
+										5192
+									],
+									[
+										5427,
+										5433
+									],
+									[
+										5727,
+										5733
+									],
+									[
+										5815,
+										5821
+									],
+									[
+										6043,
+										6049
+									],
+									[
+										6209,
+										6215
+									],
+									[
+										6434,
+										6440
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								6438,
+								6438
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 6,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3384.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 11,
+					"file": "Gemfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1663,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1567,
+								1567
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 265.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
 					"file": "app/assets/stylesheets/bracket.css",
 					"semi_transient": false,
 					"settings":
@@ -579,11 +988,11 @@
 						"translation.y": 21775.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 13,
 					"file": "app/assets/stylesheets/application.css.scss",
 					"semi_transient": false,
 					"settings":
@@ -609,11 +1018,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 14,
 					"file": "app/views/layouts/application.html.erb",
 					"semi_transient": false,
 					"settings":
@@ -638,7 +1047,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
