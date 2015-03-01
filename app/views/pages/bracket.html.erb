@@ -2,8 +2,8 @@
 <%= stylesheet_link_tag 'bracket', cache: true %>
 <div class="panel panel-default">
   <div class="panel-heading" align="center" style="font-size:2em;"><%= $year %> Bracket</div>
-  <div class="panel-body" style="padding:0;">
-    <section class="col-12-lg col-md-12 col-sm-12" style="padding-left:1em; padding-right:1em;">
+  <div class="panel-body" id="bracket-body">
+    <section class="col-sm-12">
       <div id="bracket-top" class="bracket-section">
         <section id="bracket-top-left" class="bracket-region ltr">
           <%= render partial: 'quadrant', locals: { quadrant: 1 } %>
