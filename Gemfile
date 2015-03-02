@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use SCSS for stylesheets
@@ -21,9 +20,17 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'responders', '~> 2.0'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+
+# Use for Active Admin
+gem 'devise',               github: 'plataformatec/devise'
+gem 'responders',           github: 'plataformatec/responders'
+gem 'inherited_resources',  github: 'josevalim/inherited_resources'
+gem 'ransack',              github: 'ernie/ransack'
+gem 'activeadmin',          github: 'activeadmin'
+gem 'formtastic',           github: 'justinfrench/formtastic'
+gem 'cancancan', '~> 1.7'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
