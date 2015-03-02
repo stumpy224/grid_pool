@@ -83,4 +83,4 @@ Region.create(year: "2014", name: "South", quadrant_id: "2", style: "top:246px;r
 Region.create(year: "2014", name: "East", quadrant_id: "3", style: "top:230px;right:225px;")
 Region.create(year: "2014", name: "Midwest", quadrant_id: "4", style: "top:230px;right:197px;")
 
-# AdminUser.create(email: "admin@example.com", password: "password")
+AdminUser.create!(email: "admin@example.com", password: "password", password_confirmation: "password")

@@ -68,18 +68,18 @@
 	"buffers":
 	[
 		{
-			"file": "Gemfile",
+			"file": "db/seeds.rb",
 			"settings":
 			{
-				"buffer_size": 2039,
+				"buffer_size": 3795,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/admin/participant.rb",
+			"file": "config/initializers/active_admin.rb",
 			"settings":
 			{
-				"buffer_size": 1072,
+				"buffer_size": 7438,
 				"line_ending": "Unix"
 			}
 		}
@@ -151,7 +151,6 @@
 	[
 		"/home/stumpy/Development/Projects/grid_pool",
 		"/home/stumpy/Development/Projects/grid_pool/app",
-		"/home/stumpy/Development/Projects/grid_pool/app/admin",
 		"/home/stumpy/Development/Projects/grid_pool/app/assets",
 		"/home/stumpy/Development/Projects/grid_pool/app/assets/images",
 		"/home/stumpy/Development/Projects/grid_pool/app/assets/javascripts",
@@ -163,10 +162,19 @@
 		"/home/stumpy/Development/Projects/grid_pool/app/views/layouts",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages",
 		"/home/stumpy/Development/Projects/grid_pool/config",
+		"/home/stumpy/Development/Projects/grid_pool/config/initializers",
 		"/home/stumpy/Development/Projects/grid_pool/db"
 	],
 	"file_history":
 	[
+		"/home/stumpy/Development/Projects/grid_pool/app/admin/participant.rb",
+		"/home/stumpy/Development/Projects/grid_pool/Gemfile",
+		"/home/stumpy/Development/Projects/grid_pool/app/admin/participant_square.rb",
+		"/home/stumpy/Development/Projects/grid_pool/app/admin/payout.rb",
+		"/home/stumpy/Development/Projects/grid_pool/app/admin/region.rb",
+		"/home/stumpy/Development/Projects/grid_pool/app/admin/result.rb",
+		"/home/stumpy/Development/Projects/grid_pool/app/admin/square.rb",
+		"/home/stumpy/Development/Projects/grid_pool/app/admin/year.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/admin/admin_user.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/assets/stylesheets/application.css.scss",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/results.html.erb",
@@ -181,7 +189,6 @@
 		"/home/stumpy/Development/Projects/grid_pool/app/views/layouts/application.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/layouts/_header.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/models/game.rb",
-		"/home/stumpy/Development/Projects/grid_pool/Gemfile",
 		"/home/stumpy/Development/Projects/grid_pool/app/assets/stylesheets/bracket_old.css",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/faq.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/models/year.rb",
@@ -340,19 +347,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Gemfile",
+					"file": "db/seeds.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2039,
+						"buffer_size": 3795,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1295,
-								1295
+								2207,
+								2207
 							]
 						],
 						"settings":
@@ -361,8 +368,8 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 90.0,
+						"translation.x": -0.0,
+						"translation.y": 879.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -370,30 +377,29 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/admin/participant.rb",
+					"file": "config/initializers/active_admin.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1072,
+						"buffer_size": 7438,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1072,
-								1072
+								4751,
+								4751
 							]
 						],
 						"settings":
 						{
-							"open_with_edit": true,
 							"syntax": "Packages/Ruby/Ruby.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2011.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
