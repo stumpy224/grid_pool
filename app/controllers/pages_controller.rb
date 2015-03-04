@@ -51,6 +51,7 @@ class PagesController < ApplicationController
 
   def grid
     set_global_year
+    @participant_id = params[:participant_id]
 
     @squares = Square.order(winner_digit: :asc, loser_digit: :asc)
     @participant_squares = ParticipantSquare.select(:participant_id).where(year: $year)

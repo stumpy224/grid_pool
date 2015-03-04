@@ -6,57 +6,56 @@
     </div>
     <div class="panel-body">
       <% if @winner_digits.blank? or @loser_digits.blank? %>
-      <div>Winner/Loser digits have not been added for <%= $year %>.</div>
+        <div>Winner/Loser digits have not been added for <%= $year %>.</div>
       <% else %>
-      <% winner_digits = @winner_digits.split(',') %>
-      <% loser_digits = @loser_digits.split(',') %>
-      <div class="panel panel-default">
-        <div class="panel-heading">Last Digit of the Winning Score</div>
+        <% winner_digits = @winner_digits.split(',') %>
+        <% loser_digits = @loser_digits.split(',') %>
+        <div class="panel panel-default">
+          <div class="panel-heading">Last Digit of the Winning Score</div>
           <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="col-sm-12">
               <div class="table-responsive">
-                <table id="grid_table" class="table table-condensed table-hover table-bordered">
+                <table id="grid_table" class="table table-condensed table-bordered">
                   <thead>
                     <tr>
                       <th>&nbsp;</th>
                       <% winner_digits.each do |i| %>
-                      <th><%= i %></th>
+                        <th><%= i %></th>
                       <% end %>
                     </tr>
                   </thead>
                   <tbody>
                     <% loser_digits.each do |loser| %>
-                    <tr>
-                      <td align="center" class='gridLoserDigitsColumn col-lg-1 col-md-1 col-sm-1'><%= loser %></td>
-                      <% winner_digits.each do |winner| %>
-                      <% square = @squares.find_by(winner_digit: winner, loser_digit: loser) %>
-                      <% participant_square = @participant_squares.find_by(square_id: square.id) if square.present? %>
-                      <% participant = @participants.find(participant_square.participant_id) if participant_square.present? %>
-                      <% if square.blank? or participant_square.blank? or participant.blank? %>
-                      <td class='col-lg-1 col-md-1 col-sm-1'>&nbsp;</td>
-                      <% else %>
-                      <% if participant.display_name.blank? %>
-                      <%= content_tag :td, class: 'col-lg-1 col-md-1 col-sm-1' do %>
-                      <%= participant.first_name %><br /><%= participant.last_name %>
-                      <% end %>
-                      <% else %>
-                      <%= content_tag :td, class: 'col-lg-1 col-md-1 col-sm-1' do %>
-                      <%= participant.display_name %>
-                      <% end %>
-                      <% end %>
-                      <% end %>
-                    </td>
+                      <tr>
+                        <td align="center" class='gridLoserDigitsColumn col-sm-1'><%= loser %></td>
+                        <% winner_digits.each do |winner| %>
+                          <% square = @squares.find_by(winner_digit: winner, loser_digit: loser) %>
+                          <% participant_square = @participant_squares.find_by(square_id: square.id) if square.present? %>
+                          <% participant = @participants.find(participant_square.participant_id) if participant_square.present? %>
+                          <% if square.blank? or participant_square.blank? or participant.blank? %>
+                            <td class='col-sm-1'>&nbsp;</td>
+                          <% else %>
+                            <% square_class = participant.id === @participant_id.to_i ? "highlightParticipantSquares " : "" %>
+                            <% if participant.display_name.blank? %>
+                              <%= content_tag :td, class: "#{square_class}col-sm-1" do %>
+                                <%= participant.first_name %><br /><%= participant.last_name %>
+                              <% end %>
+                            <% else %>
+                              <%= content_tag :td, class: "#{square_class}col-sm-1" do %>
+                                <%= participant.display_name %>
+                              <% end %>
+                            <% end %>
+                          <% end %>
+                        <% end %>
+                      </tr>
                     <% end %>
-                  </tr>
-                  <% end %>
-                </tbody>
-              </table>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      <% end %>
     </div>
-    <% end %>
   </div>
-</div>
 </div>

@@ -5,3 +5,6 @@
   font-weight: bold;
   vertical-align: middle !important;
 }
+.highlightParticipantSquares {
+  background-color: lightgray;
+}
