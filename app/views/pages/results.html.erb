@@ -1,5 +1,5 @@
 <% provide(:title, 'Results') %>
-<div align='center' id='results_page'>
+<div align='center' id='results_page' class="col-sm-12">
   <div class="panel panel-default">
     <div class="panel-heading" align="center" style="font-size:2em;"><%= $year %> Results</div>
     <div class="panel-body">
@@ -55,7 +55,7 @@
                   <h3 class="panel-title"><%= participant.preferred_name %></h3>
                 </div>
                 <div class="panel-body">
-                  <div>
+                  <div class="row">
                     <form class="form-inline">
                       <div>
                         <label>Won</label>
@@ -64,13 +64,13 @@
                       </div>
                     </form>
                   </div>
-                  <div>
+                  <div class="row">
                     <form class="form-inline">
-                      <div class="form-group col-sm-7">
+                      <div class="form-group col-sm-6">
                         <label>Paid</label>
                         <label style="font-weight:normal;">$<%= totalPaid %></label>
                       </div>
-                      <div class="form-group">
+                      <div class="form-group col-sm-6">
                         <label>Profit</label>
                         
                         <% profit = totalWon - totalPaid %>
@@ -89,7 +89,7 @@
                       </div>
                     </form>
                   </div>
-                  <div>
+                  <div class="row">
                     <% square_text = @participant_squares.many? ? "Squares" : "Square" %>
                     <%= link_to grid_path(participant_id: participant.id, year: $year), title: "View #{square_text}" do %>
                       <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
