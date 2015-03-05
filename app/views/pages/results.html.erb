@@ -113,7 +113,7 @@
                 </button>
                 <ul class="dropdown-menu" role="menu">
                   <% Year.order(year: :desc).each do |y| %>
-                  <li><%= link_to y.year, controller: 'pages', action: 'results', year: y.year %></li>
+                    <li><%= link_to y.year, controller: 'pages', action: 'results', year: y.year %></li>
                   <% end %>
                 </ul>
               </div>

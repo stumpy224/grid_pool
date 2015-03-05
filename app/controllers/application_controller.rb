@@ -115,6 +115,7 @@ class ApplicationController < ActionController::Base
         participant_winner = @@participants.find(participant_square.participant_id)
         g.square_winner = participant_winner.preferred_name
         g.square_winner_id = participant_winner.id
+        ParticipantEmailer.game_winner_email(g, participant_winner)
       else
         g.square_winner = ''
       end
