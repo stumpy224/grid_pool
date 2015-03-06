@@ -23,6 +23,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
+gem 'figaro'
+
 # Use for Active Admin
 gem 'devise',               github: 'plataformatec/devise'
 gem 'responders',           github: 'plataformatec/responders'

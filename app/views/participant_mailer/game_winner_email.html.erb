@@ -8,23 +8,29 @@
         font-size: smaller;
         text-align: right;
       }
+      .team-name {
+        padding-right: 1em;
+      }
     </style>
   </head>
   <body>
-    <h1>Congratulations, ~Al!</h1>
+    <h1>Congratulations, <%= @participant.first_name %>!</h1>
+    <!--User.where(weekly_subscriber: true).find_each do |user|
+      NewsMailer.weekly(user).deliver_now
+    end-->
     <p>
-      You have won ~$5 in round #~2 of the NCAA Men's Basketball Tournament, and ~$10 overall.
+      You won $<%= @payout.game_payout %> in round #<%= @game.round %> of the NCAA Men's Basketball Tournament, and ~$10 overall!
     </p>
     <table>
       <tr>
-        <td class="team-seed">3</td>
-        <td>Purdue</td>
-        <td>87</td>
+        <td class="team-seed"><%= @game.team_on_top_seed %></td>
+        <td class="team-name"><%= @game.team_on_top_name_short %></td>
+        <td><%= @game.team_on_top_score %></td>
       </tr>
       <tr>
-        <td class="team-seed">14</td>
-        <td>Indiana</td>
-        <td>75</td>
+        <td class="team-seed"><%= @game.team_on_bottom_seed %></td>
+        <td class="team-name"><%= @game.team_on_bottom_name_short %></td>
+        <td><%= @game.team_on_bottom_score %></td>
       </tr>
     </table>
   </body>

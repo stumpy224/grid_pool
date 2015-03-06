@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"fon",
+				"font-size"
+			],
+			[
+				"partic",
+				"participant_winner"
+			],
+			[
+				"st",
+				"style	Attr"
+			],
+			[
 				"square",
 				"square_class"
 			],
@@ -103,7 +115,55 @@
 			"file": "app/views/pages/results.html.erb",
 			"settings":
 			{
-				"buffer_size": 5457,
+				"buffer_size": 5522,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/application_controller.rb",
+			"settings":
+			{
+				"buffer_size": 5463,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/mailers/participant_mailer.rb",
+			"settings":
+			{
+				"buffer_size": 407,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/participant_mailer/game_winner_email.html.erb",
+			"settings":
+			{
+				"buffer_size": 633,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/stumpy/Desktop/email.html",
+			"settings":
+			{
+				"buffer_size": 617,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/participant_mailer/game_winner_email.text.erb",
+			"settings":
+			{
+				"buffer_size": 161,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 429,
 				"line_ending": "Unix"
 			}
 		},
@@ -212,16 +272,22 @@
 		"/home/stumpy/Development/Projects/grid_pool/app/assets/javascripts",
 		"/home/stumpy/Development/Projects/grid_pool/app/assets/stylesheets",
 		"/home/stumpy/Development/Projects/grid_pool/app/controllers",
+		"/home/stumpy/Development/Projects/grid_pool/app/mailers",
 		"/home/stumpy/Development/Projects/grid_pool/app/models",
 		"/home/stumpy/Development/Projects/grid_pool/app/views",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/layouts",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages",
+		"/home/stumpy/Development/Projects/grid_pool/app/views/participant_mailer",
 		"/home/stumpy/Development/Projects/grid_pool/config",
-		"/home/stumpy/Development/Projects/grid_pool/config/initializers",
 		"/home/stumpy/Development/Projects/grid_pool/db"
 	],
 	"file_history":
 	[
+		"/home/stumpy/Development/Projects/grid_pool/app/admin/year.rb",
+		"/home/stumpy/Development/Projects/grid_pool/config/database.yml",
+		"/home/stumpy/Development/Projects/grid_pool/config/application.rb",
+		"/home/stumpy/Development/Projects/grid_pool/tmp/cache/assets/development/sass/2d841171c91b0a497143ecf5d7d786ef1cc40f58/_asset-pipeline.scssc",
+		"/home/stumpy/Development/Projects/grid_pool/app/mailers/application_mailer.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/layouts/application.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/assets/stylesheets/application.css.scss",
 		"/home/stumpy/Development/Projects/grid_pool/app/assets/stylesheets/grid.css",
@@ -240,7 +306,6 @@
 		"/home/stumpy/Development/Projects/grid_pool/app/admin/region.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/admin/result.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/admin/square.rb",
-		"/home/stumpy/Development/Projects/grid_pool/app/admin/year.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/admin/admin_user.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/results.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/bracket.html.erb",
@@ -264,7 +329,6 @@
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/_game_bootstrap.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/_participantWithNoResults.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/_participantWithResults.html.erb",
-		"/home/stumpy/Development/Projects/grid_pool/config/application.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/layouts/_wait.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/_region.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/assets/stylesheets/faq.css",
@@ -314,6 +378,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"user",
 			"equal?",
 			"eql?",
 			"square_class",
@@ -407,7 +472,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -437,7 +502,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -467,7 +532,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -476,15 +541,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5457,
+						"buffer_size": 5522,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3419,
-								3419
+								5047,
+								5047
 							]
 						],
 						"settings":
@@ -494,14 +559,191 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1311.0,
+						"translation.y": 1784.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/application_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5463,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1622,
+								1622
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1044.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/mailers/participant_mailer.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 407,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								266,
+								266
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/participant_mailer/game_winner_email.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 633,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								370,
+								370
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/stumpy/Desktop/email.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 617,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								617,
+								617
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 7,
+					"file": "app/views/participant_mailer/game_winner_email.text.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 161,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								161,
+								161
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/views/layouts/application.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 429,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								367,
+								367
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
 					"file": "app/assets/stylesheets/grid.css",
 					"semi_transient": false,
 					"settings":
@@ -525,11 +767,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 10,
 					"file": "app/views/pages/faq.html.erb",
 					"semi_transient": false,
 					"settings":
@@ -554,11 +796,11 @@
 						"translation.y": 1083.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 11,
 					"file": "app/assets/stylesheets/faq.css",
 					"semi_transient": false,
 					"settings":
@@ -584,11 +826,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 12,
 					"file": "app/controllers/pages_controller.rb",
 					"semi_transient": false,
 					"settings":
@@ -600,8 +842,8 @@
 						"selection":
 						[
 							[
-								850,
-								850
+								987,
+								987
 							]
 						],
 						"settings":
@@ -614,7 +856,7 @@
 						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
