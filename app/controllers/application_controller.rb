@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include ApplicationHelper
+
   protect_from_forgery with: :exception
 
   @@participants = Participant.all
@@ -136,6 +137,7 @@ class ApplicationController < ActionController::Base
         round: game.round,
         year: $year,
         game_id: game.game_id)
+      # ParticipantMailer.game_winner_email(game).deliver_now
     end
   end
 

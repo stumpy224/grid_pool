@@ -1,0 +1,19 @@
+<% totalWon = 0 %>
+<% @results.each do |r| %>
+  <% payout = Payout.find_by(round: r.round).game_payout %>
+  <% totalWon += payout if !payout.blank? %>
+<% end %>
+<% squares_text = "square" %>
+<% squares_text.concat("s") if @participant_squares.many? %>
+Congratulations, <%= @participant.first_name %>!
+===============================================
+You won $<%= @payout.game_payout %> in round <%= @game.round %> of the <%= $year %> NCAA Men's Basketball Tournament Grid Pool!
+
+  <%= @game.team_on_top_seed %> <%= @game.team_on_top_name_short %>
+    <%= @game.team_on_top_score %>
+  <%= @game.team_on_bottom_seed %> <%= @game.team_on_bottom_name_short %>
+    <%= @game.team_on_bottom_score %>
+
+<% if totalWon > 0 %>
+You have won $<%= totalWon %> overall.
+<% end %>

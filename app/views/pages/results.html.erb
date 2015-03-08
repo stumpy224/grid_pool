@@ -1,5 +1,5 @@
 <% provide(:title, 'Results') %>
-<div align='center' id='results_page'>
+<div align='center' id='results_page' class="col-sm-12">
   <div class="panel panel-default">
     <div class="panel-heading" align="center" style="font-size:2em;"><%= $year %> Results</div>
     <div class="panel-body">
@@ -36,12 +36,8 @@
 
             <% participant_results.each do |result| %>
               <% resultCounter += 1 %>
-
-              <% if resultCounter == participant_results.count %>
-                <% winning_rounds_text.concat("#{result.round}") %>
-              <% else %>
-                <% winning_rounds_text.concat("#{result.round}, ") %>
-              <% end %>
+              <% winning_rounds_text.concat("#{result.round}") %>
+              <% winning_rounds_text.concat(", ") if resultCounter < participant_results.count %>
 
               <% @payout = @payouts.find_by(round: result.round).game_payout %>
               <% if !@payout.blank? %>
@@ -55,7 +51,7 @@
                   <h3 class="panel-title"><%= participant.preferred_name %></h3>
                 </div>
                 <div class="panel-body">
-                  <div>
+                  <div class="row">
                     <form class="form-inline">
                       <div>
                         <label>Won</label>
@@ -64,13 +60,13 @@
                       </div>
                     </form>
                   </div>
-                  <div>
+                  <div class="row">
                     <form class="form-inline">
-                      <div class="form-group col-sm-7">
+                      <div class="form-group col-sm-6">
                         <label>Paid</label>
                         <label style="font-weight:normal;">$<%= totalPaid %></label>
                       </div>
-                      <div class="form-group">
+                      <div class="form-group col-sm-6">
                         <label>Profit</label>
                         
                         <% profit = totalWon - totalPaid %>
@@ -89,30 +85,18 @@
                       </div>
                     </form>
                   </div>
+                  <div class="row">
+                    <% square_text = @participant_squares.many? ? "Squares" : "Square" %>
+                    <%= link_to grid_path(participant_id: participant.id, year: $year), title: "View #{square_text}" do %>
+                      <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+                    <% end %>
+                  </div>
                 </div>
               </div>
             </div>
           <% end %>
         <% else %>
           <div style='font-weight:bold;'>Please enter participants for the year.</div>
-        <% end %>
-        <% if Year.many? %>
-          <div class="row">
-            <div>Looking for results from a different year?</div>
-            <br />
-            <div class="dropdown">
-              <div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                  Select Year <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                  <% Year.order(year: :desc).each do |y| %>
-                  <li><%= link_to y.year, controller: 'pages', action: 'results', year: y.year %></li>
-                  <% end %>
-                </ul>
-              </div>
-            </div>
-          </div>
         <% end %>
       <% else %>
         <div style='font-weight:bold;'>Please enter payouts for the year.</div>

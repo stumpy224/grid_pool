@@ -1,5 +1,5 @@
 ActiveAdmin.register Participant do
-  permit_params :name, :display_name, participant_squares_attributes: [:id, :square_id, :year, :_destroy]
+  permit_params :name, :display_name, :email, :active, participant_squares_attributes: [:id, :square_id, :year, :_destroy]
 
   config.sort_order = 'name_asc'
 
@@ -7,6 +7,8 @@ ActiveAdmin.register Participant do
     f.inputs do
       f.input :name
       f.input :display_name
+      f.input :email
+      f.input :active
     end
 
     f.inputs 'Squares' do
