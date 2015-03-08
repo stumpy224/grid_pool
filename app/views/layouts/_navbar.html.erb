@@ -12,14 +12,14 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li id="nav_link_to_results"><%= link_to 'Results', controller: 'pages', action: 'results', year: $year %></li>
-        <li id="nav_link_to_bracket"><%= link_to 'Bracket', bracket_path, id: 'bracketLink', remote: true %></li>
-        <li id="nav_link_to_grid"><%= link_to 'Grid', grid_path %></li>
-        <li id="nav_link_to_faq"><%= link_to 'FAQ', faq_path %></li>
+        <li id="nav_link_to_bracket"><%= link_to 'Bracket', bracket_path(year: $year), id: 'bracketLink', remote: true %></li>
+        <li id="nav_link_to_grid"><%= link_to 'Grid', grid_path(year: $year) %></li>
+        <li id="nav_link_to_faq"><%= link_to 'FAQ', faq_path(year: $year) %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Select Year<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
+          <ul class="dropdown-menu" role="menu" style="min-width:0;">
             <% Year.order(year: :desc).each do |y| %>
-              <li><%= link_to y.year, controller: 'pages', action: 'results', year: y.year %></li>
+              <li style="text-align:right;"><%= link_to y.year, '', id: "navigate_to_#{y.year}" %></li>
             <% end %>
           </ul>
         </li>

@@ -63,7 +63,6 @@ class PagesController < ApplicationController
 
   def faq
     set_global_year
-    @year = Year.find_by(year: $year).year
   end
 
   private

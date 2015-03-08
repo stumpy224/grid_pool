@@ -67,6 +67,15 @@ function makeAllNavLinksInactive() {
 }
 
 $(document).ready(function() {
+  $('#navigate_to_2015').click(function() {
+    navigate_by_year('2015');
+  });
+  $('#navigate_to_2014').click(function() {
+    navigate_by_year('2014');
+  });
+});
+
+$(document).ready(function() {
   $('.scrollToTop').click(function() {
     $('html, body').animate({
       scrollTop: 0
@@ -97,3 +106,14 @@ $(document).ready(function() {
     });
   });
 });
+
+function navigate_by_year(year) {
+  var page = '/';
+  if ( $('#nav_link_to_bracket').hasClass('active') )
+    page += 'bracket'
+  if ( $('#nav_link_to_grid').hasClass('active') )
+    page += 'grid'
+  if ( $('#nav_link_to_faq').hasClass('active') )
+    page += 'faq'
+  window.location = page + '?year=' + year;
+}
