@@ -23,7 +23,7 @@
   <% squares_text.concat("s") if @participant_squares.many? %>
 
   <body style="font-family: 'Roboto', sans-serif;">
-    <table style="border-bottom: 5px solid #00adbb;">
+    <table style="border-bottom: 5px solid #00adbb;" width="660px;">
       <tr>
         <td>
           <%= image_tag image_path("winner.jpg"), size: "70x70", alt: "Winner" %>
@@ -34,7 +34,7 @@
       </tr>
     </table>
     <p style="padding-bottom: 10px;">
-      You won $<%= @payout.game_payout %> in round #<%= @game.round %> of the <%= $year %> NCAA Men's Basketball Tournament!
+      You won $<%= @payout.game_payout %> in round <%= @game.round %> of the <%= $year %> NCAA Men's Basketball Tournament Grid Pool!
     </p>
     <table id="results_table" width="500px;">
       <tr>
@@ -53,7 +53,7 @@
           </table>
         </td>
         <td rowspan="3">
-          <%= image_tag image_path("basketball_email.png"), size: "100x100", alt: "Basketball" %>
+          <!--<%= image_tag image_path("basketball_email.png"), size: "100x100", alt: "Basketball" %>-->
         </td>
       </tr>
       <tr>
@@ -76,6 +76,15 @@
           </td>
         </tr>
       <% end %>
+      <!--<tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="2" style="font-size:smaller;">Not wanting to receive these emails?  Click here to unsubscribe.</td>
+      </tr>-->
     </table>
   </body>
 </html>
