@@ -1,8 +1,8 @@
-# Preview all emails at http://localhost:3000/rails/mailers/participant_mailer
-class ParticipantMailerPreview < ActionMailer::Preview
+# Preview all emails at http://localhost:3000/rails/mailers/application_mailer
+class ApplicationMailerPreview < ActionMailer::Preview
   def game_winner_email_preview
     $year = "2015"
-    ParticipantMailer.game_winner_email(create_preview_game)
+    ApplicationMailer.game_winner_email(create_preview_game)
   end
 
   def create_preview_game

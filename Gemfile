@@ -23,8 +23,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
-gem 'figaro'
-
 # Use for Active Admin
 gem 'devise',               github: 'plataformatec/devise'
 gem 'responders',           github: 'plataformatec/responders'
@@ -55,6 +53,9 @@ group :development, :test do
 
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+
+  # Used for testing emails
+  gem 'letter_opener'
 end
 
 group :production do
