@@ -13,25 +13,69 @@
       }
     </style>
   </head>
-  <body>
-    <h1>Congratulations, <%= @participant.first_name %>!</h1>
-    <!--User.where(weekly_subscriber: true).find_each do |user|
-      NewsMailer.weekly(user).deliver_now
-    end-->
-    <p>
-      You won $<%= @payout.game_payout %> in round #<%= @game.round %> of the NCAA Men's Basketball Tournament!
+
+  <% totalWon = 0 %>
+  <% @results.each do |r| %>
+    <% payout = Payout.find_by(round: r.round).game_payout %>
+    <% totalWon += payout if !payout.blank? %>
+  <% end %>
+  <% squares_text = "square" %>
+  <% squares_text.concat("s") if @participant_squares.many? %>
+
+  <body style="font-family: 'Roboto', sans-serif;">
+    <table style="border-bottom: 5px solid #00adbb;">
+      <tr>
+        <td>
+          <%= image_tag image_path("winner.jpg"), size: "70x70", alt: "Winner" %>
+        </td>
+        <td style="vertical-align:bottom;">
+          <h1 style="margin-bottom:14;">Congratulations, <%= @participant.first_name %>!</h1>
+        </td>
+      </tr>
+    </table>
+    <p style="padding-bottom: 10px;">
+      You won $<%= @payout.game_payout %> in round #<%= @game.round %> of the <%= $year %> NCAA Men's Basketball Tournament!
     </p>
-    <table>
+    <table id="results_table" width="500px;">
       <tr>
-        <td class="team-seed"><%= @game.team_on_top_seed %></td>
-        <td class="team-name"><%= @game.team_on_top_name_short %></td>
-        <td><%= @game.team_on_top_score %></td>
+        <td>
+          <table cellpadding="2">
+            <tr>
+              <td class="team-seed"><%= @game.team_on_top_seed %></td>
+              <td class="team-name"><%= @game.team_on_top_name_short %></td>
+              <td><%= @game.team_on_top_score %></td>
+            </tr>
+            <tr>
+              <td class="team-seed"><%= @game.team_on_bottom_seed %></td>
+              <td class="team-name"><%= @game.team_on_bottom_name_short %></td>
+              <td><%= @game.team_on_bottom_score %></td>
+            </tr>
+          </table>
+        </td>
+        <td rowspan="3">
+          <%= image_tag image_path("basketball_email.png"), size: "100x100", alt: "Basketball" %>
+        </td>
       </tr>
       <tr>
-        <td class="team-seed"><%= @game.team_on_bottom_seed %></td>
-        <td class="team-name"><%= @game.team_on_bottom_name_short %></td>
-        <td><%= @game.team_on_bottom_score %></td>
+        <td>&nbsp;</td>
       </tr>
+      <tr>
+        <td>
+          <p style="font-size:smaller; padding-left:5px;">
+            Click <%= link_to 'here', grid_path(participant_id: @participant.id, year: $year), target: "_blank" %> to view your <%= squares_text %>.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <% if totalWon > 0 %>
+        <tr>
+          <td>
+            <p>You have won $<%= totalWon %> overall.</p>
+          </td>
+        </tr>
+      <% end %>
     </table>
   </body>
 </html>

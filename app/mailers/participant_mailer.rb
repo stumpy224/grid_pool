@@ -5,7 +5,8 @@ class ParticipantMailer < ApplicationMailer
   def game_winner_email(game)
     @game = game
     @participant = Participant.find_by(id: game.square_winner_id)
-    @results = Result.find_by(participant_id: @participant.id, round: game.round, year: $year)
+    @participant_squares = ParticipantSquare.where(participant_id: @participant.id, year: $year)
+    @results = Result.where(participant_id: @participant.id, year: $year)
     @payout = Payout.find_by(round: game.round, year: $year)
     mail(to: @participant.email, subject: "Sample Email")
   end

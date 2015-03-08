@@ -36,12 +36,8 @@
 
             <% participant_results.each do |result| %>
               <% resultCounter += 1 %>
-
-              <% if resultCounter == participant_results.count %>
-                <% winning_rounds_text.concat("#{result.round}") %>
-              <% else %>
-                <% winning_rounds_text.concat("#{result.round}, ") %>
-              <% end %>
+              <% winning_rounds_text.concat("#{result.round}") %>
+              <% winning_rounds_text.concat(", ") if resultCounter < participant_results.count %>
 
               <% @payout = @payouts.find_by(round: result.round).game_payout %>
               <% if !@payout.blank? %>
