@@ -83,7 +83,7 @@ class PagesController < ApplicationController
       else
         tourney_games.each do |g|
           game = translate_game_info(g)
-          create_new_result_if_necessary(game) if (game.game_over?)
+          create_new_result_if_necessary(game) if game.game_over?
         end
       end
     end

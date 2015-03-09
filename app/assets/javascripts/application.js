@@ -88,7 +88,7 @@ $(document).ready(function() {
     e.stopPropagation();
     e.preventDefault();
     $('#wait_modal').modal('show');
-    $.get( "/refresh_bracket", function( data ) {
+    $.get("/refresh_bracket", function(data) {
       $('#wait_modal').modal('hide');
       window.location = '/bracket'
     });
@@ -100,9 +100,9 @@ $(document).ready(function() {
     e.stopPropagation();
     e.preventDefault();
     $('#wait_modal').modal('show');
-    $.get( "/refresh_results", function( data ) {
+    $.get("/refresh_results", function(data) {
       $('#wait_modal').modal('hide');
-      $( "#results_page" ).load( window.location.href + ' #results_page');
+      $("#results_page").load(window.location.href + ' #results_page');
     });
   });
 });

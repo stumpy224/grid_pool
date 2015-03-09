@@ -126,7 +126,7 @@ class ApplicationController < ActionController::Base
 
   def create_new_result_if_necessary(game)
     if ($year >= "2015" or ($year <= "2014" and game.round != "1"))
-      create_new_result(game) if @@results.find_by(game_id: game.game_id).blank?
+      create_new_result(game) if @@results.find_by(game_id: game.game_id, year: $year).blank?
     end
   end
 
@@ -137,7 +137,7 @@ class ApplicationController < ActionController::Base
         round: game.round,
         year: $year,
         game_id: game.game_id)
-      # ParticipantMailer.game_winner_email(game).deliver_now
+      ParticipantMailer.game_winner_email(game).deliver_now
     end
   end
 

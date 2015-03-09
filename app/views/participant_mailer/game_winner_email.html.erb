@@ -25,20 +25,20 @@
   <body style="font-family: 'Roboto', sans-serif;">
     <table style="border-bottom: 5px solid #00adbb;" width="660px;">
       <tr>
-        <td>
-          <%= image_tag("winner.jpg", size: "70x70", alt: "Winner") %>
+        <td align="center">
+          <%= image_tag("https://lh5.googleusercontent.com/-V-V4rjyz4Xg/VP0NyNQCTII/AAAAAAAAJdw/ToMGxwAag10/w577-h553-no/winner.jpg", size: "70x70", alt: "Winner") %>
         </td>
         <td style="vertical-align:bottom;">
           <h1 style="margin-bottom:14;">Congratulations, <%= @participant.first_name %>!</h1>
         </td>
       </tr>
     </table>
-    <p style="padding-bottom:.5em;">
+    <p>
       You won $<%= @payout.game_payout %> in round <%= @game.round %> of the <%= $year %> NCAA Men's Basketball Tournament Grid Pool!
     </p>
     <table id="results_table" width="500px;">
       <tr>
-        <td style="padding-bottom:1em;">
+        <td>
           <table cellpadding="2">
             <tr>
               <td class="team-seed"><%= @game.team_on_top_seed %></td>
@@ -53,26 +53,14 @@
           </table>
         </td>
       </tr>
-      <tr>
-        <td style="padding-bottom:1em;">
-          <p style="font-size:smaller; padding-left:5px;">
-            Click <%= link_to 'here', grid_path(participant_id: @participant.id, year: $year), target: "_blank" %> to view your <%= squares_text %>.
-          </p>
-        </td>
-      </tr>
-      <% if totalWon > 0 %>
-        <tr>
-          <td>
-            <p>You have won $<%= totalWon %> overall.</p>
-          </td>
-        </tr>
-      <% end %>
-      <!--<tr>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td colspan="2" style="font-size:smaller;">Not wanting to receive these emails?  Click here to unsubscribe.</td>
-      </tr>-->
+    </table>
+    <p style="font-size:smaller; padding-left:.5em;">
+      Click <%= link_to 'here', grid_url(participant_id: @participant.id, year: $year, only_path: false), target: "_blank" %> to view your <%= squares_text %>.
+    </p>
+    <% if totalWon > 0 %>
+      <p>You have won $<%= totalWon %> overall.</p>
+    <% end %>
+      <!--<p>Not wanting to receive these emails?  Click here to unsubscribe.</p>-->
     </table>
   </body>
 </html>
