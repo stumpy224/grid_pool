@@ -26,19 +26,19 @@
     <table style="border-bottom: 5px solid #00adbb;" width="660px;">
       <tr>
         <td>
-          <%= image_tag image_path("winner.jpg"), size: "70x70", alt: "Winner" %>
+          <%= image_tag("winner.jpg", size: "70x70", alt: "Winner") %>
         </td>
         <td style="vertical-align:bottom;">
           <h1 style="margin-bottom:14;">Congratulations, <%= @participant.first_name %>!</h1>
         </td>
       </tr>
     </table>
-    <p style="padding-bottom: 10px;">
+    <p style="padding-bottom:.5em;">
       You won $<%= @payout.game_payout %> in round <%= @game.round %> of the <%= $year %> NCAA Men's Basketball Tournament Grid Pool!
     </p>
     <table id="results_table" width="500px;">
       <tr>
-        <td>
+        <td style="padding-bottom:1em;">
           <table cellpadding="2">
             <tr>
               <td class="team-seed"><%= @game.team_on_top_seed %></td>
@@ -52,22 +52,13 @@
             </tr>
           </table>
         </td>
-        <td rowspan="3">
-          <!--<%= image_tag image_path("basketball_email.png"), size: "100x100", alt: "Basketball" %>-->
-        </td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>
+        <td style="padding-bottom:1em;">
           <p style="font-size:smaller; padding-left:5px;">
             Click <%= link_to 'here', grid_path(participant_id: @participant.id, year: $year), target: "_blank" %> to view your <%= squares_text %>.
           </p>
         </td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
       </tr>
       <% if totalWon > 0 %>
         <tr>
@@ -77,9 +68,6 @@
         </tr>
       <% end %>
       <!--<tr>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
         <td>&nbsp;</td>
       </tr>
       <tr>
