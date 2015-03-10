@@ -579,10 +579,10 @@ height:12px;
 }
 
 .live-top {
-font-size:10px;
-font-family:TechwoodSlabW04,Rockwell,Georgia,serif;
+font-size:11px;
+/*font-family:TechwoodSlabW04,Rockwell,Georgia,serif;*/
 z-index:11;
-color:#FFF;
+/*color:#FFF;*/
 line-height:16px;
 }
 
@@ -1233,7 +1233,7 @@ padding:0;
 }
 
 .game-is-live {
-  -webkit-box-shadow: 0 0 5px 2px darkgray;
-  -moz-box-shadow: 0 0 5px 2px darkgray;
-  box-shadow: 0 0 5px 2px darkgray;
+  -webkit-box-shadow: 0 0 5px 3px darkgray;
+  -moz-box-shadow: 0 0 5px 3px darkgray;
+  box-shadow: 0 0 5px 3px darkgray;
 }

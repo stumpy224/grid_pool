@@ -137,7 +137,7 @@ class ApplicationController < ActionController::Base
         round: game.round,
         year: $year,
         game_id: game.game_id)
-      ParticipantMailer.game_winner_email(game).deliver_now
+      # ParticipantMailer.game_winner_email(game).deliver_now
     end
   end
 
