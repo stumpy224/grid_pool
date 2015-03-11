@@ -3,7 +3,7 @@
 <div class="panel panel-default">
   <div class="panel-heading" align="center" style="font-size:2em;"><%= $year %> Bracket</div>
   <div class="panel-body" style="padding:0;">
-    <section class="col-12-lg col-md-12 col-sm-12" style="padding-left:1em; padding-right:1em;">
+    <section class="col-sm-12" style="padding-left:1em; padding-right:1em;">
       <div id="bracket-top" class="bracket-section">
         <section id="bracket-top-left" class="bracket-region ltr">
           <%= render partial: 'quadrant', locals: { quadrant: 1 } %>
@@ -13,23 +13,22 @@
           <%= render partial: 'quadrant', locals: { quadrant: 3 } %>
         </section>
       </div>
-      <div id="bracket-middle" class="bracket-section">
-        <div class="champ-logo"><img class="championship-bracket-logo" typeof="foaf:Image" src="http://i.turner.ncaa.com/dr/ncaa/ncaa7/release/sites/default/files/styles/championship_bracket_logo/public/m_final_four.png?itok=6L8M8-mp" alt=""></div>
-        <section id="bracket-final" class="bracket-region ctr">
-          <div id="bracket-final-games">
-            <section id="game601" class="game-set pre game-sm sect-6 col-1 pos-1">
+      <div id="bracket-middle" class="bracket-section col-sm-12">
+        <div id="bracket-final" class="bracket-region ctr">
+          <div class="col-sm-12">
+            <div id="game601" class="game-set pre game-lg" style="margin-left:13.667%;">
               <%= render partial: 'game', locals: { bracket_position_id: "601" } %>
-            </section>
+            </div>
 
-            <section id="game701" class="game-set pre game-lg championship sect-6 col-2 pos-1">
+            <div id="game701" class="game-set pre game-lg championship" style="margin-left:38.667%;">
               <%= render partial: 'game', locals: { bracket_position_id: "701" } %>
-            </section>
-            
-            <section id="game602" class="game-set pre game-sm sect-6 col-3 pos-1">
+            </div>
+
+            <div id="game602" class="game-set pre game-lg" style="margin-left:63.667%;">
               <%= render partial: 'game', locals: { bracket_position_id: "602" } %>
-            </section>
+            </div>
           </div>
-        </section>
+        </div>
       </div>
       <div id="bracket-bottom" class="bracket-section">
         <section id="bracket-bottom-left" class="bracket-region ltr">
