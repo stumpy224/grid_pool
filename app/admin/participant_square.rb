@@ -31,6 +31,6 @@ ActiveAdmin.register ParticipantSquare do
     column :year, sortable: :year
     column :created_at, sortable: :created_at
     column :updated_at, sortable: :updated_at
-    default_actions
+    actions
   end
 end
