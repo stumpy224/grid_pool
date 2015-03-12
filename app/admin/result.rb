@@ -17,6 +17,7 @@ ActiveAdmin.register Result do
   end
   
   index do
+    selectable_column
     column :year, sortable: :year do |result|
       div class: 'year' do
         result.year
