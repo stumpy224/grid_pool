@@ -21,6 +21,7 @@ ActiveAdmin.register ParticipantSquare do
   end
 
   index do
+    selectable_column
     column :participant_id, sortable: :participant_id do |s|
       Participant.find(s.participant_id).preferred_name
     end
