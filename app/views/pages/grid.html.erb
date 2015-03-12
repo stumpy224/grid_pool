@@ -11,7 +11,7 @@
         <% winner_digits = @winner_digits.split(',') %>
         <% loser_digits = @loser_digits.split(',') %>
         <div class="panel panel-default">
-          <div class="panel-heading">Last Digit of the Winning Score</div>
+          <div class="panel-heading">Last Digit of the Winner's Score</div>
           <div class="row">
             <div class="col-sm-12">
               <div class="table-responsive">
@@ -41,7 +41,7 @@
                                 <%= participant.first_name %><br /><%= participant.last_name %>
                               <% end %>
                             <% else %>
-                              <%= content_tag :td, class: "#{square_class}col-sm-1" do %>
+                              <%= content_tag :td, class: "#{square_class}col-sm-1", title: participant.first_name + ' ' + participant.last_name do %>
                                 <%= participant.display_name %>
                               <% end %>
                             <% end %>

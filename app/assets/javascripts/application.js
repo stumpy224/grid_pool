@@ -26,6 +26,7 @@ $(function() {
 
 function init() {
 	setActiveNavbarLink();
+  $(document).tooltip();
 }
 
 function setActiveNavbarLink() {
