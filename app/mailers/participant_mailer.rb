@@ -1,5 +1,5 @@
 class ParticipantMailer < ApplicationMailer
-  default from: "TheGridPool@gmail.com", bcc: "TheGridPool@gmail.com"
+  default from: "The Grid Pool <TheGridPool@gmail.com>", bcc: "TheGridPool@gmail.com"
 
   def game_winner_email(game)
     @game = game
