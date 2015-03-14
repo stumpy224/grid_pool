@@ -108,6 +108,15 @@ $(document).ready(function() {
   });
 });
 
+$(document).keydown(function(e) {
+  if(e.which == 13 || e.keyCode == 13)
+    $("[class^=ui-tooltip]").hide();
+});
+
+$(document).click(function() {
+  $("[class^=ui-tooltip]").hide();
+});
+
 function navigate_by_year(year) {
   var page = '/';
   if ( $('#nav_link_to_bracket').hasClass('active') )
