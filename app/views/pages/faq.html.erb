@@ -1,80 +1,218 @@
 <% provide(:title, 'FAQ') %>
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title" align="center" style="font-size:2em;">FAQ</h3>
-	</div>
-	<div class="panel-body">
-		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-			<div class="panel panel-default">
-				<div class="panel-heading" role="tab" id="headingOne">
-					<h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-						What is a 100 square grid pool?
-					</a>
-					</h4>
-				</div>
-				<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-					<div class="panel-body">
-						A 10x10 grid comprised of 10 rows and 10 columns.  Once each square is filled, the numbers 0 thru 9 will be randomly drawn across the top of each column (the x-axis), which represent the Winner's digits.  Then, the numbers 0 thru 9 will be randomly drawn down the side of each row (the y-axis), which represent the Loser's digits.
+<div class="col-sm-12">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title" align="center" style="font-size:2em;">FAQ</h3>
+		</div>
+		<div class="panel-body">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingOne">
+						<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+							What is a 100 square grid pool?
+						</a>
+						</h4>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+						<div class="panel-body">
+							A 10x10 grid comprised of 10 rows and 10 columns.  Once each square is filled, the numbers 0 thru 9 will be randomly drawn across the top of each column (the x-axis), which represent the Winner's digits.  Then, the numbers 0 thru 9 will be randomly drawn down the side of each row (the y-axis), which represent the Loser's digits.
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading" role="tab" id="headingTwo">
-					<h4 class="panel-title">
-					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-						Do I need to know anything about basketball?
-					</a>
-					</h4>
-				</div>
-				<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-					<div class="panel-body">
-						No, you do not need any knowledge of the game of basketball.  Many people believe there is strategy behind picking their squares, but even that is chance.
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingTwo">
+						<h4 class="panel-title">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							Do I need to know anything about basketball?
+						</a>
+						</h4>
+					</div>
+					<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+						<div class="panel-body">
+							No, you do not need any knowledge of the game of basketball.  Many people believe there is strategy behind picking their squares, but even that is chance.
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading" role="tab" id="headingThree">
-					<h4 class="panel-title">
-					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-						How do I know if I won?
-					</a>
-					</h4>
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingThree">
+						<h4 class="panel-title">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							How do I know if I won?
+						</a>
+						</h4>
+					</div>
+					<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						<div class="panel-body">
+							After a game is over, the winner of the game is determined by finding the column with the LAST digit of the winner's score, and the row with the LAST digit of the loser's score.  The name found in the square is the winner.  For example, let's say I have the square for winner=7 and loser=5, and Purdue beats Indiana 8<b><u>7</u></b> to 7<b><u>5</u></b>.  I would be considered the winner for that game.
+							<div class="row">
+								<div class="col-md-4 col-sm-4 table-centered">
+									<div class="table-responsive" style="margin-top:1em;">
+										<table id="faq_grid_winner_example" class="table table-condensed table-bordered">
+											<thead>
+												<tr>
+													<th class="col-lg-1 col-md-1 col-sm-1">&nbsp;</th>
+													<th class="col-lg-1 col-md-1 col-sm-1">0</th>
+													<th class="col-lg-1 col-md-1 col-sm-1 grid-winner-locator-example">7</th>
+													<th class="col-lg-1 col-md-1 col-sm-1">8</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>9</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+												</tr>
+												<tr>
+													<td class="grid-winner-locator-example">5</td>
+													<td>&nbsp;</td>
+													<td class="grid-winner-example"><b>Winner</b></td>
+													<td>&nbsp;</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-					<div class="panel-body">
-						After a game is over, the winner of the game is determined by finding the column with the LAST digit of the winner's score, and the row with the LAST digit of the loser's score.  The name found in the square is the winner.  For example, let's say I have the square for winner=7 and loser=5, and Purdue beats Indiana 8<b><u>7</u></b> to 7<b><u>5</u></b>.  I would be considered the winner for that game.
-						<div class="row">
-							<div class="col-md-4 col-sm-4 table-centered">
-								<div class="table-responsive" style="margin-top:1em;">
-									<table id="faq_grid_winner_example" class="table table-condensed table-bordered">
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingFour">
+						<h4 class="panel-title">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+							If I have a winning square, will I be notified?
+						</a>
+						</h4>
+					</div>
+					<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+						<div class="panel-body">
+							If you have provided your email, you will be notified of a winning square.
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingFive">
+						<h4 class="panel-title">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+							I have a winning square... how much did I win?
+						</a>
+						</h4>
+					</div>
+					<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+						<div class="panel-body">
+							<div class="row">
+								<div class="table-responsive">
+									<table id="faq_payouts" class='table table-condensed table-hover'>
 										<thead>
 											<tr>
-												<th class="col-lg-1 col-md-1 col-sm-1">&nbsp;</th>
-												<th class="col-lg-1 col-md-1 col-sm-1">0</th>
-												<th class="col-lg-1 col-md-1 col-sm-1 grid-winner-locator-example">7</th>
-												<th class="col-lg-1 col-md-1 col-sm-1">8</th>
+												<th>Round</th>
+												<th># of<br />Winners</th>
+												<th>Payout<br />Per Game</th>
+												<th>Total<br />Payout</th>
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
-												<td>9</td>
-												<td>&nbsp;</td>
-												<td>&nbsp;</td>
-												<td>&nbsp;</td>
-											</tr>
-											<tr>
-												<td class="grid-winner-locator-example">5</td>
-												<td>&nbsp;</td>
-												<td class="grid-winner-example"><b>Winner</b></td>
-												<td>&nbsp;</td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>&nbsp;</td>
-												<td>&nbsp;</td>
-												<td>&nbsp;</td>
-											</tr>
+											<% if $year >= "2015" %>
+												<tr>
+													<td>1</td>
+													<td>4</td>
+													<td>$5</td>
+													<td>$20</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>32</td>
+													<td>$5</td>
+													<td>$160</td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>16</td>
+													<td>$10</td>
+													<td>$160</td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td>8</td>
+													<td>$20</td>
+													<td>$160</td>
+												</tr>
+												<tr>
+													<td>5</td>
+													<td>4</td>
+													<td>$40</td>
+													<td>$160</td>
+												</tr>
+												<tr>
+													<td>6</td>
+													<td>2</td>
+													<td>$80</td>
+													<td>$160</td>
+												</tr>
+												<tr>
+													<td>7</td>
+													<td>1</td>
+													<td>$180</td>
+													<td>$180</td>
+												</tr>
+												<tr class="totalRow">
+													<td>Total</td>
+													<td>67</td>
+													<td>&nbsp;</td>
+													<td>$1000</td>
+												</tr>
+											<% else %>
+												<tr>
+													<td>2</td>
+													<td>32</td>
+													<td>$5</td>
+													<td>$160</td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>16</td>
+													<td>$8</td>
+													<td>$128</td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td>8</td>
+													<td>$10</td>
+													<td>$80</td>
+												</tr>
+												<tr>
+													<td>5</td>
+													<td>4</td>
+													<td>$15</td>
+													<td>$60</td>
+												</tr>
+												<tr>
+													<td>6</td>
+													<td>2</td>
+													<td>$20</td>
+													<td>$40</td>
+												</tr>
+												<tr>
+													<td>7</td>
+													<td>1</td>
+													<td>$32</td>
+													<td>$32</td>
+												</tr>
+												<tr class="totalRow">
+													<td>Total</td>
+													<td>63</td>
+													<td>&nbsp;</td>
+													<td>$500</td>
+												</tr>
+											<% end %>
 										</tbody>
 									</table>
 								</div>
@@ -82,168 +220,32 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading" role="tab" id="headingFour">
-					<h4 class="panel-title">
-					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-						If I have a winning square, will I be notified?
-					</a>
-					</h4>
-				</div>
-				<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-					<div class="panel-body">
-						If you have provided your email, you will be notified of a winning square.
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingSix">
+						<h4 class="panel-title">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+							Can I win more than once?
+						</a>
+						</h4>
 					</div>
-				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading" role="tab" id="headingFive">
-					<h4 class="panel-title">
-					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-						I have a winning square... how much did I win?
-					</a>
-					</h4>
-				</div>
-				<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-					<div class="panel-body">
-						<div class="row">
-							<div class="table-responsive">
-								<table id="faq_payouts" class='table table-condensed table-hover'>
-									<thead>
-										<tr>
-											<th>Round</th>
-											<th># of<br />Winners</th>
-											<th>Payout<br />Per Game</th>
-											<th>Total<br />Payout</th>
-										</tr>
-									</thead>
-									<tbody>
-										<% if $year >= "2015" %>
-											<tr>
-												<td>1</td>
-												<td>4</td>
-												<td>$5</td>
-												<td>$20</td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>32</td>
-												<td>$5</td>
-												<td>$160</td>
-											</tr>
-											<tr>
-												<td>3</td>
-												<td>16</td>
-												<td>$10</td>
-												<td>$160</td>
-											</tr>
-											<tr>
-												<td>4</td>
-												<td>8</td>
-												<td>$20</td>
-												<td>$160</td>
-											</tr>
-											<tr>
-												<td>5</td>
-												<td>4</td>
-												<td>$40</td>
-												<td>$160</td>
-											</tr>
-											<tr>
-												<td>6</td>
-												<td>2</td>
-												<td>$80</td>
-												<td>$160</td>
-											</tr>
-											<tr>
-												<td>7</td>
-												<td>1</td>
-												<td>$180</td>
-												<td>$180</td>
-											</tr>
-											<tr class="totalRow">
-												<td>Total</td>
-												<td>67</td>
-												<td>&nbsp;</td>
-												<td>$1000</td>
-											</tr>
-										<% else %>
-											<tr>
-												<td>2</td>
-												<td>32</td>
-												<td>$5</td>
-												<td>$160</td>
-											</tr>
-											<tr>
-												<td>3</td>
-												<td>16</td>
-												<td>$8</td>
-												<td>$128</td>
-											</tr>
-											<tr>
-												<td>4</td>
-												<td>8</td>
-												<td>$10</td>
-												<td>$80</td>
-											</tr>
-											<tr>
-												<td>5</td>
-												<td>4</td>
-												<td>$15</td>
-												<td>$60</td>
-											</tr>
-											<tr>
-												<td>6</td>
-												<td>2</td>
-												<td>$20</td>
-												<td>$40</td>
-											</tr>
-											<tr>
-												<td>7</td>
-												<td>1</td>
-												<td>$32</td>
-												<td>$32</td>
-											</tr>
-											<tr class="totalRow">
-												<td>Total</td>
-												<td>63</td>
-												<td>&nbsp;</td>
-												<td>$500</td>
-											</tr>
-										<% end %>
-									</tbody>
-								</table>
-							</div>
+					<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+						<div class="panel-body">
+							Yes, you can win multiple times.
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading" role="tab" id="headingSix">
-					<h4 class="panel-title">
-					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-						Can I win more than once?
-					</a>
-					</h4>
-				</div>
-				<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
-					<div class="panel-body">
-						Yes, you can win multiple times.
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingSeven">
+						<h4 class="panel-title">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+							Are the first four games from Round 1 included?
+						</a>
+						</h4>
 					</div>
-				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading" role="tab" id="headingSeven">
-					<h4 class="panel-title">
-					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-						Are the first four games from Round 1 included?
-					</a>
-					</h4>
-				</div>
-				<div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
-					<div class="panel-body">
-						Yes, beginning in 2015, the first four games will be included.
+					<div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+						<div class="panel-body">
+							Yes, beginning in 2015, the first four games will be included.
+						</div>
 					</div>
 				</div>
 			</div>
