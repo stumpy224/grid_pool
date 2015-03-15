@@ -1,5 +1,5 @@
 <div class="region-info">
-  Midwest
+  <%= @regions.find_by(quadrant_id: quadrant).name %>
 </div>
 
 <% (1..8).each do |i| %>

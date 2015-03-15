@@ -264,16 +264,16 @@ font-family:sans-serif;
 }
 
 .rtl .region-info,.ltr .region-info {
-top:317px;
+top:330px;
 }
 
 .rtl .region-info {
-right:100px;
+right:220px;
 text-align:left;
 }
 
 .ltr .region-info {
-left:100px;
+left:210px;
 text-align:right;
 }
 
