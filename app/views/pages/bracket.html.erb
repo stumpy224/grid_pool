@@ -1,68 +1,68 @@
 <% provide(:title, "Bracket") %>
 <%= stylesheet_link_tag 'bracket', cache: true %>
-<div class="panel panel-default">
-  <div class="panel-heading" align="center" style="font-size:2em;"><%= $year %> Bracket</div>
-  <div class="panel-body" style="padding:0;">
-    <section class="col-sm-12" style="padding-left:1em; padding-right:1em;">
-      <div id="bracket-top" class="bracket-section">
-        <section id="bracket-top-left" class="bracket-region ltr">
-          <%= render partial: 'quadrant', locals: { quadrant: 1 } %>
-        </section>
+<div class="bracket-parent" align="center">
+  <div class="panel panel-default">
+    <div class="panel-heading" align="center" style="font-size:2em;"><%= $year %> Bracket</div>
+    <div class="panel-body">
+      <div style="padding-left:1em; padding-right:1em;">
+        <div id="bracket-top" class="bracket-section">
+          <div id="bracket-top-left" class="bracket-region ltr col-sm-6">
+            <%= render partial: 'quadrant', locals: { quadrant: 1 } %>
+          </div>
 
-        <section id="bracket-top-right" class="bracket-region rtl">
-          <%= render partial: 'quadrant', locals: { quadrant: 3 } %>
-        </section>
-      </div>
-      <div id="bracket-middle" class="bracket-section col-sm-12">
-        <div id="bracket-final" class="bracket-region ctr">
-          <div class="col-sm-12">
-            <div id="game601" class="game-set pre game-lg" style="margin-left:13.667%;">
-              <%= render partial: 'game', locals: { bracket_position_id: "601" } %>
-            </div>
+          <div id="bracket-top-right" class="bracket-region rtl col-sm-6">
+            <%= render partial: 'quadrant', locals: { quadrant: 3 } %>
+          </div>
+        </div>
+        <div id="bracket-middle" class="bracket-section">
+          <div id="bracket-final" class="bracket-region ctr">
+              <div id="game601" class="game-set pre game-sm col-1 pos-1">
+                <%= render partial: 'game', locals: { bracket_position_id: "601" } %>
+              </div>
 
-            <div id="game701" class="game-set pre game-lg championship" style="margin-left:38.667%;">
-              <%= render partial: 'game', locals: { bracket_position_id: "701" } %>
-            </div>
+              <div id="game701" class="game-set pre game-lg championship col-2 pos-1">
+                <%= render partial: 'game', locals: { bracket_position_id: "701" } %>
+              </div>
 
-            <div id="game602" class="game-set pre game-lg" style="margin-left:63.667%;">
-              <%= render partial: 'game', locals: { bracket_position_id: "602" } %>
+              <div id="game602" class="game-set pre game-sm col-3 pos-1">
+                <%= render partial: 'game', locals: { bracket_position_id: "602" } %>
+              </div>
+          </div>
+        </div>
+        <div id="bracket-bottom" class="bracket-section">
+          <div id="bracket-bottom-left" class="bracket-region ltr">
+            <%= render partial: 'quadrant', locals: { quadrant: 2 } %>
+          </div>
+
+          <div id="bracket-bottom-right" class="bracket-region rtl">
+            <%= render partial: 'quadrant', locals: { quadrant: 4 } %>
+          </div>
+        </div>
+        <div id="bracket-footer" class="bracket-section ">
+          <div id="bracket-first" class="bracket-region ctr">
+            <div class="region-info">
+              <h2 class="region-title">First Four</h2>
             </div>
+            
+            <div id="game101" class="game-set pre game-xs sect-1 col-1 pos-1">
+              <%= render partial: 'game', locals: { bracket_position_id: "101" } %>
+            </div>
+            
+            <div id="game102" class="game-set pre game-xs sect-1 col-2 pos-1">
+              <%= render partial: 'game', locals: { bracket_position_id: "102" } %>
+            </div>
+            
+            <div id="game103" class="game-set pre game-xs sect-1 col-3 pos-1">
+              <%= render partial: 'game', locals: { bracket_position_id: "103" } %>
+            </div>
+            
+            <div id="game104" class="game-set pre game-xs sect-1 col-4 pos-1">
+              <%= render partial: 'game', locals: { bracket_position_id: "104" } %>
+            </div>
+            
           </div>
         </div>
       </div>
-      <div id="bracket-bottom" class="bracket-section">
-        <section id="bracket-bottom-left" class="bracket-region ltr">
-          <%= render partial: 'quadrant', locals: { quadrant: 2 } %>
-        </section>
-
-        <section id="bracket-bottom-right" class="bracket-region rtl">
-          <%= render partial: 'quadrant', locals: { quadrant: 4 } %>
-        </section>
-      </div>
-      <div id="bracket-footer" class="bracket-section ">
-        <section id="bracket-first" class="bracket-region ctr">
-          <div class="region-info">
-            <h2 class="region-title">First Four</h2>
-          </div>
-          
-          <section id="game101" class="game-set pre game-xs sect-1 col-1 pos-1">
-            <%= render partial: 'game', locals: { bracket_position_id: "101" } %>
-          </section>
-          
-          <section id="game102" class="game-set pre game-xs sect-1 col-2 pos-1">
-            <%= render partial: 'game', locals: { bracket_position_id: "102" } %>
-          </section>
-          
-          <section id="game103" class="game-set pre game-xs sect-1 col-3 pos-1">
-            <%= render partial: 'game', locals: { bracket_position_id: "103" } %>
-          </section>
-          
-          <section id="game104" class="game-set pre game-xs sect-1 col-4 pos-1">
-            <%= render partial: 'game', locals: { bracket_position_id: "104" } %>
-          </section>
-          
-        </section>
-      </div>
-    </section>
+    </div>
   </div>
 </div>

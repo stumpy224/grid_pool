@@ -244,7 +244,8 @@ top:297px;
 color:#00375C;
 margin-bottom:0;
 margin-top:12px;
-font-family:TechwoodSlabW04,Rockwell,Georgia,serif;
+/*font-family:TechwoodSlabW04,Rockwell,Georgia,serif;*/
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 font-size:18px;
 font-weight:700;
 text-align: center !important;
@@ -712,11 +713,11 @@ float:left;
 }
 
 #bracket-final.ctr .col-1 {
-left:195px;
+left:177px;
 }
 
 #bracket-final.ctr .col-2 {
-left:385px;
+left:381px;
 }
 
 .championship .live-top,.championship .live-bottom {
@@ -1123,7 +1124,7 @@ left:-1px;
 }
 
 #ncaa-nav-primary-navigation nav.shop_nav.content-panel,#bracket-final.ctr .col-3 {
-left:595px;
+left:603px;
 }
 
 #ncaa-nav-primary-navigation .edit-nav-link:hover,#ncaa-nav-primary-navigation nav.content-panel .ncaa-nav-highlights a.edit-nav-link:hover,.team-info.info-top,.team-info.info-bottom {
@@ -1236,4 +1237,13 @@ padding:0;
   -webkit-box-shadow: 0 0 5px 3px darkgray;
   -moz-box-shadow: 0 0 5px 3px darkgray;
   box-shadow: 0 0 5px 3px darkgray;
+}
+
+.bracket-parent {
+  width: 1050px;
+  margin: auto;
+  /*font-size: 10px;*/
+  position: relative;
+  padding: 0px 15px;
+  /*box-sizing: border-box;*/
 }
