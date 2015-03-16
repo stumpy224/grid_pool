@@ -113,7 +113,6 @@ function handleBracketLinkClick() {
   $('#bracket_link').click(function(e) {
     e.stopPropagation();
     e.preventDefault();
-    alert('bracket');
     $('#wait_modal').modal('show');
     $.get("/refresh_bracket", function(data) {
       $('#wait_modal').modal('hide');
