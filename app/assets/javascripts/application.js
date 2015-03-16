@@ -26,10 +26,24 @@ $(function() {
 
 function init() {
 	setActiveNavbarLink();
+  handleNavigationByYears();
+  handleResultsLinkClick();
+  handleBracketLinkClick();
+
   $(document).tooltip();
+
+  $(document).keydown(function(e) {
+    if(e.which == 13 || e.keyCode == 13)
+      $("[class^=ui-tooltip]").hide();
+  });
+
+  $(document).click(function() {
+    $("[class^=ui-tooltip]").hide();
+  });
 }
 
 function setActiveNavbarLink() {
+  makeAllNavLinksInactive();
   if (window.location.pathname == '/' || window.location.pathname.indexOf("/?year") > -1)
     setActiveNavbarLinkToRoot();
   else if (window.location.pathname.indexOf("/bracket") > -1)
@@ -41,22 +55,18 @@ function setActiveNavbarLink() {
 }
 
 function setActiveNavbarLinkToRoot() {
-  makeAllNavLinksInactive();
   $('#nav_link_to_results').addClass('active');
 }
 
 function setActiveNavbarLinkToBracket() {
-  makeAllNavLinksInactive();
   $('#nav_link_to_bracket').addClass('active');
 }
 
 function setActiveNavbarLinkToGrid() {
-  makeAllNavLinksInactive();
   $('#nav_link_to_grid').addClass('active');
 }
 
 function setActiveNavbarLinkToFaq() {
-  makeAllNavLinksInactive();
   $('#nav_link_to_faq').addClass('active');
 }
 
@@ -67,36 +77,27 @@ function makeAllNavLinksInactive() {
   $('#nav_link_to_faq').removeClass('active'); 
 }
 
-$(document).ready(function() {
+function handleNavigationByYears() {
   $('#navigate_to_2015').click(function() {
     navigate_by_year('2015');
   });
   $('#navigate_to_2014').click(function() {
     navigate_by_year('2014');
-  });
-});
+  }); 
+}
 
-$(document).ready(function() {
-  $('.scrollToTop').click(function() {
-    $('html, body').animate({
-      scrollTop: 0
-    }, 'normal');
-  });
-});
+function navigate_by_year(year) {
+  var page = '/';
+  if ( $('#nav_link_to_bracket').hasClass('active') )
+    page += 'bracket';
+  if ( $('#nav_link_to_grid').hasClass('active') )
+    page += 'grid';
+  if ( $('#nav_link_to_faq').hasClass('active') )
+    page += 'faq';
+  window.location.href = page + '?year=' + year;
+}
 
-$(document).ready(function() {
-  $('#bracketLink').click(function(e) { 
-    e.stopPropagation();
-    e.preventDefault();
-    $('#wait_modal').modal('show');
-    $.get("/refresh_bracket", function(data) {
-      $('#wait_modal').modal('hide');
-      window.location = '/bracket'
-    });
-  });
-});
-
-$(document).ready(function() {
+function handleResultsLinkClick() {
   $('#refresh_results_link').click(function(e) { 
     e.stopPropagation();
     e.preventDefault();
@@ -106,24 +107,17 @@ $(document).ready(function() {
       $("#results_page").load(window.location.href + ' #results_page');
     });
   });
-});
+}
 
-$(document).keydown(function(e) {
-  if(e.which == 13 || e.keyCode == 13)
-    $("[class^=ui-tooltip]").hide();
-});
-
-$(document).click(function() {
-  $("[class^=ui-tooltip]").hide();
-});
-
-function navigate_by_year(year) {
-  var page = '/';
-  if ( $('#nav_link_to_bracket').hasClass('active') )
-    page += 'bracket'
-  if ( $('#nav_link_to_grid').hasClass('active') )
-    page += 'grid'
-  if ( $('#nav_link_to_faq').hasClass('active') )
-    page += 'faq'
-  window.location = page + '?year=' + year;
+function handleBracketLinkClick() {
+  $('#bracket_link').click(function(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    alert('bracket');
+    $('#wait_modal').modal('show');
+    $.get("/refresh_bracket", function(data) {
+      $('#wait_modal').modal('hide');
+      window.location.href = '/bracket'
+    });
+  });
 }
