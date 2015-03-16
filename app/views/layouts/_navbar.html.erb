@@ -19,7 +19,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Select Year<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu" style="min-width:0;">
             <% Year.order(year: :desc).each do |y| %>
-              <li style="text-align:right;"><%= link_to y.year, '', id: "navigate_to_#{y.year}" %></li>
+              <li style="text-align:left;"><%= link_to y.year, '', id: "navigate_to_#{y.year}" %></li>
             <% end %>
           </ul>
         </li>
