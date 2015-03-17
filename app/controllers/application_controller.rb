@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
     if url.empty?
       return "Oh, snap! The URL has not been entered for #{$year}."
     else
-      return parse_tourney_response(response)
+      # return parse_tourney_response(response)
       response = Net::HTTP.get_response(URI.parse(url))
     end
 
@@ -50,11 +50,11 @@ class ApplicationController < ActionController::Base
   end
 
   def parse_tourney_response(response)
-    file = File.open('fake_response.txt', 'rb')
-    formatted_response = (file.read.sub! 'callbackWrapper(', '').sub! '});', '}'
-    file.close
+    # file = File.open('fake_response.txt', 'rb')
+    # formatted_response = (file.read.sub! 'callbackWrapper(', '').sub! '});', '}'
+    # file.close
 
-    # formatted_response = (response.body.sub! 'callbackWrapper(', '').sub! '});', '}'
+    formatted_response = (response.body.sub! 'callbackWrapper(', '').sub! '});', '}'
     json_response = JSON.parse(formatted_response)
     json_response['games']
   end
