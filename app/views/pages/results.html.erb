@@ -5,7 +5,7 @@
     <div class="panel-body">
       <% if @payouts.exists? %>
         <% if @participants_with_squares.any? %>
-          <% if @results.count < 63 %>
+          <% if ($year >= "2015" and @results.count < 67) or ($year <= "2014" and @results.count < 63) %>
             <div class="row">
               <div>
                 <% last_updated_at = @year.results_last_updated_at %>
