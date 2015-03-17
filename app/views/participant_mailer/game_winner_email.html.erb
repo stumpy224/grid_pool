@@ -6,7 +6,6 @@
     <style>
       .team-seed {
         font-size: smaller;
-        text-align: right;
       }
       .team-name {
         padding-right: 1em;
@@ -41,12 +40,12 @@
         <td>
           <table cellpadding="2">
             <tr>
-              <td class="team-seed"><%= @game.team_on_top_seed %></td>
+              <td class="team-seed" align="right"><%= @game.team_on_top_seed %></td>
               <td class="team-name"><%= @game.team_on_top_name_short %></td>
               <td><%= @game.team_on_top_score %></td>
             </tr>
             <tr>
-              <td class="team-seed"><%= @game.team_on_bottom_seed %></td>
+              <td class="team-seed" align="right"><%= @game.team_on_bottom_seed %></td>
               <td class="team-name"><%= @game.team_on_bottom_name_short %></td>
               <td><%= @game.team_on_bottom_score %></td>
             </tr>
@@ -60,7 +59,5 @@
     <% if totalWon > 0 %>
       <p>You have won $<%= totalWon %> overall.</p>
     <% end %>
-      <!--<p>Not wanting to receive these emails?  Click here to unsubscribe.</p>-->
-    </table>
   </body>
 </html>
