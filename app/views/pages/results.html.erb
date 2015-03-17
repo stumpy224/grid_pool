@@ -87,9 +87,7 @@
                   </div>
                   <div class="row">
                     <% square_text = @participant_squares.many? ? "Squares" : "Square" %>
-                    <%= link_to grid_path(participant_id: participant.id, year: $year), title: "View #{square_text}" do %>
-                      <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
-                    <% end %>
+                    <%= link_to image_tag("squares.png"), grid_path(participant_id: participant.id, year: $year), title: "View #{square_text}" %>
                   </div>
                 </div>
               </div>
