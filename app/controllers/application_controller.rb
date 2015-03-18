@@ -30,7 +30,6 @@ class ApplicationController < ActionController::Base
 
   def get_tourney_info
     Game.clean_up
-    $year = get_latest_year if $year.blank?
     url = Year.find_by(year: $year).source_url
 
     if url.empty?

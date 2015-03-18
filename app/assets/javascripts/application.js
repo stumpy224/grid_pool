@@ -81,8 +81,10 @@ function handleNavigationByYears() {
 
 function navigate_by_year(year) {
   var page = '/';
-  if ( $('#nav_link_to_bracket').hasClass('active') )
-    page += 'bracket';
+  if ( $('#nav_link_to_bracket').hasClass('active') ) {
+    refreshBracket(year);
+    return;
+  }
   if ( $('#nav_link_to_grid').hasClass('active') )
     page += 'grid';
   if ( $('#nav_link_to_faq').hasClass('active') )
@@ -94,13 +96,7 @@ function handleResultsLinkClick() {
   $('#refresh_results_link').click(function(e) { 
     e.stopPropagation();
     e.preventDefault();
-    $('#wait_modal').modal('show');
-    $.get("/refresh_results", function(data) {
-      var yearParam = getParameterByName("year");
-      var queryString = yearParam.length > 0 ? '?year=' + yearParam : '';
-      $('#wait_modal').modal('hide');
-      window.location.reload();
-    });
+    refreshResults("");
   });
 }
 
@@ -108,13 +104,27 @@ function handleBracketLinkClick() {
   $('#bracket_link').click(function(e) {
     e.stopPropagation();
     e.preventDefault();
-    $('#wait_modal').modal('show');
-    $.get("/refresh_bracket", function(data) {
-      var yearParam = getParameterByName("year");
-      var queryString = yearParam.length > 0 ? '?year=' + yearParam : '';
-      $('#wait_modal').modal('hide');
-      window.location.href = '/bracket' + queryString;
-    });
+    refreshBracket("");
+  });
+}
+
+function refreshBracket(year) {
+  $('#wait_modal').modal('show');
+  $.get("/refresh_bracket", function(data) {
+    var yearParam = year.length > 0 ? year : getParameterByName("year");
+    var queryString = yearParam.length > 0 ? '?year=' + yearParam : '';
+    $('#wait_modal').modal('hide');
+    window.location.href = '/bracket' + queryString;
+  });
+}
+
+function refreshResults(year) {
+  $('#wait_modal').modal('show');
+  $.get("/refresh_results", function(data) {
+    var yearParam = year.length > 0 ? year : getParameterByName("year");
+    var queryString = yearParam.length > 0 ? '?year=' + yearParam : '';
+    $('#wait_modal').modal('hide');
+    window.location.reload();
   });
 }
 

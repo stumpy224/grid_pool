@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   respond_to :html, :xml, :json, :js
 
   def bracket
+    set_global_year
     get_tourney_games
     @games = Game.all
     @regions = Region.where(year: $year)
