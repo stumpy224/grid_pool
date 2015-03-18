@@ -87,7 +87,7 @@
                   </div>
                   <div class="row">
                     <% square_text = @participant_squares.many? ? "Squares" : "Square" %>
-                    <%= link_to image_tag("squares.png"), grid_path(participant_id: participant.id, year: $year), title: "View #{square_text}" %>
+                    <%= link_to image_tag("squares.png"), grid_path(participant_id: participant.id, year: $year), title: "View #{square_text}", "data-toggle" => "tooltip", "data-placement" => "right" %>
                   </div>
                 </div>
               </div>
