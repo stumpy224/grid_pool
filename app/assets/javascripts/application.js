@@ -30,21 +30,14 @@ function init() {
   handleResultsLinkClick();
   handleBracketLinkClick();
 
-  $(document).tooltip();
-
-  $(document).keydown(function(e) {
-    if(e.which == 13 || e.keyCode == 13)
-      $("[class^=ui-tooltip]").hide();
-  });
-
-  $(document).click(function() {
-    $("[class^=ui-tooltip]").hide();
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
   });
 }
 
 function setActiveNavbarLink() {
   makeAllNavLinksInactive();
-  if (window.location.pathname == '/' || window.location.pathname.indexOf("/?year") > -1)
+  if (window.location.pathname === '/' || window.location.pathname.indexOf("/?year") > -1)
     setActiveNavbarLinkToRoot();
   else if (window.location.pathname.indexOf("/bracket") > -1)
     setActiveNavbarLinkToBracket();
@@ -103,8 +96,10 @@ function handleResultsLinkClick() {
     e.preventDefault();
     $('#wait_modal').modal('show');
     $.get("/refresh_results", function(data) {
+      var yearParam = getParameterByName("year");
+      var queryString = yearParam.length > 0 ? '?year=' + yearParam : '';
       $('#wait_modal').modal('hide');
-      $("#results_page").load(window.location.href + ' #results_page');
+      window.location.reload();
     });
   });
 }
@@ -115,8 +110,17 @@ function handleBracketLinkClick() {
     e.preventDefault();
     $('#wait_modal').modal('show');
     $.get("/refresh_bracket", function(data) {
+      var yearParam = getParameterByName("year");
+      var queryString = yearParam.length > 0 ? '?year=' + yearParam : '';
       $('#wait_modal').modal('hide');
-      window.location.href = '/bracket'
+      window.location.href = '/bracket' + queryString;
     });
   });
+}
+
+function getParameterByName(name) {
+  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+  var results = regex.exec(location.search);
+  return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
