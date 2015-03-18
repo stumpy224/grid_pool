@@ -1,6 +1,7 @@
-<div class="region-info">
-  <%= @regions.find_by(quadrant_id: quadrant).name %>
-</div>
+<% region = @regions.find_by(quadrant_id: quadrant) %>
+<%= content_tag :div, class: "region-info", style: region.style do %>
+  <%= region.name %>
+<% end %>
 
 <% (1..8).each do |i| %>
   <% offset = (quadrant - 1) * 8 %>
