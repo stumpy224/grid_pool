@@ -60,14 +60,6 @@
 			}
 		},
 		{
-			"file": "app/assets/stylesheets/bracket.css",
-			"settings":
-			{
-				"buffer_size": 26146,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/controllers/pages_controller.rb",
 			"settings":
 			{
@@ -208,6 +200,7 @@
 	],
 	"file_history":
 	[
+		"/home/stumpy/Development/Projects/grid_pool/app/assets/stylesheets/bracket.css",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/layouts/_wait.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/faq.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/assets/stylesheets/application.css.scss",
@@ -215,7 +208,6 @@
 		"/home/stumpy/Development/Projects/grid_pool/test/mailers/previews/application_mailer.rb",
 		"/home/stumpy/Development/Projects/grid_pool/test/mailers/participant_mailer_test.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/layouts/mailer.html.erb",
-		"/home/stumpy/Development/Projects/grid_pool/app/assets/stylesheets/bracket.css",
 		"/home/stumpy/Development/Projects/grid_pool/config/environments/production.rb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/bracket_old.html.erb",
 		"/home/stumpy/Development/Projects/grid_pool/app/views/pages/_quadrant.html.erb",
@@ -310,7 +302,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -340,7 +332,7 @@
 						"translation.y": 249.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -367,42 +359,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 592.0,
+						"translation.y": 34.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/assets/stylesheets/bracket.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 26146,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								26027,
-								26027
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 22048.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "app/controllers/pages_controller.rb",
 					"semi_transient": false,
 					"settings":
@@ -428,11 +392,11 @@
 						"translation.y": 1116.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "app/views/pages/_quadrant.html.erb",
 					"semi_transient": false,
 					"settings":
@@ -458,11 +422,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "app/views/pages/results.html.erb",
 					"semi_transient": false,
 					"settings":
@@ -474,8 +438,8 @@
 						"selection":
 						[
 							[
-								53,
-								53
+								1582,
+								1582
 							]
 						],
 						"settings":
@@ -485,14 +449,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 216.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "app/assets/stylesheets/application.css.scss",
 					"semi_transient": false,
 					"settings":
@@ -510,17 +474,17 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "app/views/layouts/application.html.erb",
 					"semi_transient": false,
 					"settings":
@@ -545,11 +509,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "app/assets/javascripts/application.js",
 					"semi_transient": false,
 					"settings":
@@ -575,11 +539,11 @@
 						"translation.y": 1329.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 8,
 					"file": "app/views/layouts/_navbar.html.erb",
 					"semi_transient": false,
 					"settings":
@@ -605,11 +569,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 9,
 					"file": "app/views/participant_mailer/game_winner_email.html.erb",
 					"semi_transient": false,
 					"settings":
@@ -635,11 +599,11 @@
 						"translation.y": 267.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 10,
 					"file": "test/mailers/previews/participant_mailer_preview.rb",
 					"semi_transient": false,
 					"settings":
@@ -665,11 +629,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 11,
 					"file": "app/mailers/participant_mailer.rb",
 					"semi_transient": false,
 					"settings":
@@ -695,7 +659,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 10,
 					"type": "text"
 				}
 			]
@@ -765,7 +729,7 @@
 		[
 			[
 				"",
-				"~/Development/Projects/sandbox/sandbox.sublime-project"
+				"~/Development/Projects/team_activities/team_activities.sublime-project"
 			]
 		],
 		"width": 380.0

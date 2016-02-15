@@ -1,24 +1,23 @@
 <% provide(:title, 'Results') %>
-<div align='center' class="col-sm-12">
-  <div class="panel panel-default">
-    <div class="panel-heading" align="center" style="font-size:2em;"><%= $year %> Results</div>
-    <div class="panel-body">
-      <% if @payouts.exists? %>
-        <% if @participants_with_squares.any? %>
-          <% if ($year >= "2015" and @results.count < 67) or ($year <= "2014" and @results.count < 63) %>
-            <div class="row">
-              <div>
-                <% last_updated_at = @year.results_last_updated_at %>
-                <% if !last_updated_at.blank? %>
-                  <%= last_updated_at.strftime('Last updated: %m/%d/%Y at %I:%M %p') %>
-                <% end %>
-              </div>
-              <div>
-                <%= link_to 'Refresh', refresh_results_path, id: 'refresh_results_link', remote: true, class: 'btn btn-primary' %>
-              </div>
-              <br />
-            </div>
+<% if @payouts.exists? %>
+  <% if @participants_with_squares.any? %>
+    <% if ($year >= "2015" and @results.count < 67) or ($year <= "2014" and @results.count < 63) %>
+      <div class="row">
+        <div>
+          <% last_updated_at = @year.results_last_updated_at %>
+          <% if !last_updated_at.blank? %>
+            <%= last_updated_at.strftime('Last updated: %m/%d/%Y at %I:%M %p') %>
           <% end %>
+        </div>
+        <div>
+          <%= link_to 'Refresh', refresh_results_path, id: 'refresh_results_link', remote: true, class: 'btn btn-primary' %>
+        </div>
+        <br />
+      </div>
+    <% end %>
+    <div class="card-deck-wrapper">
+      <div class="card-deck">
+        <div class="row">
           <% @participants_with_squares.each do |p_w_sq| %>
             <% resultCounter = 0 %>
             <% totalWon = 0 %>
@@ -45,60 +44,58 @@
               <% end %>
             <% end %>
 
-            <div class="col-sm-4">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title"><%= participant.preferred_name %></h3>
+            <div class="col-sm-4" style="padding-bottom:1em;">
+              <div class="card text-xs-center">
+                <div class="card-header">
+                  <%= participant.preferred_name %>
                 </div>
-                <div class="panel-body">
-                  <div class="row">
-                    <form class="form-inline">
-                      <div>
-                        <label>Won</label>
-                        <label style="font-weight:normal;">$<%= totalWon %></label>
-                        <h5 style="margin-top:0;"><small><%= winning_rounds_text %></small></h5>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="row">
-                    <form class="form-inline">
-                      <div class="form-group col-sm-6">
-                        <label>Paid</label>
-                        <label style="font-weight:normal;">$<%= totalPaid %></label>
-                      </div>
-                      <div class="form-group col-sm-6">
-                        <label>Profit</label>
-                        
-                        <% profit = totalWon - totalPaid %>
-                        <% profit_style = "" %>
-                        <% if profit > 0 %>
-                          <% profit_style = "font-weight:normal;color:green;" %>
-                        <% elsif profit < 0 %>
-                          <% profit_style = "font-weight:normal;color:red;" %>
-                        <% else %>
-                          <% profit_style = "font-weight:normal;" %>
-                        <% end %>
+                <div class="card-block">
+                  <p class="card-text">
+                    <label>Won</label>
+                    <label style="font-weight:normal;">$<%= totalWon %></label>
+                    <small class="text-muted"><%= winning_rounds_text %></small>
+                  </p>
+                  <p class="card-text">
+                    <div class="row">
+                      <form class="form-inline">
+                        <div class="form-group col-sm-6">
+                          <label>Paid</label>
+                          <label style="font-weight:normal;">$<%= totalPaid %></label>
+                        </div>
+                        <div class="form-group col-sm-6">
+                          <label>Profit</label>
+                          
+                          <% profit = totalWon - totalPaid %>
+                          <% profit_style = "" %>
+                          <% if profit > 0 %>
+                            <% profit_style = "font-weight:normal;color:green;" %>
+                          <% elsif profit < 0 %>
+                            <% profit_style = "font-weight:normal;color:red;" %>
+                          <% else %>
+                            <% profit_style = "font-weight:normal;" %>
+                          <% end %>
 
-                        <%= content_tag :label, style: profit_style do %>
-                          <span style="color:black;">$</span><%= profit %>
-                        <% end %>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="row">
+                          <%= content_tag :label, style: profit_style do %>
+                            <span style="color:black;">$</span><%= profit %>
+                          <% end %>
+                        </div>
+                      </form>
+                    </div>
+                  </p>
+                  <p class="card-text">
                     <% square_text = @participant_squares.many? ? "Squares" : "Square" %>
                     <%= link_to image_tag("squares.png"), grid_path(participant_id: participant.id, year: $year), title: "View #{square_text}", "data-toggle" => "tooltip", "data-placement" => "right" %>
-                  </div>
+                  </p>
                 </div>
               </div>
             </div>
           <% end %>
-        <% else %>
-          <div style='font-weight:bold;'>Please enter participants for the year.</div>
-        <% end %>
-      <% else %>
-        <div style='font-weight:bold;'>Please enter payouts for the year.</div>
-      <% end %>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  <% else %>
+    <div style='font-weight:bold;'>Please enter participants for the year.</div>
+  <% end %>
+<% else %>
+  <div style='font-weight:bold;'>Please enter payouts for the year.</div>
+<% end %>
