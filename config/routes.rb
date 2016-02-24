@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'faq', to: 'pages#faq'
   get 'refresh_bracket', to: 'pages#refresh_bracket'
   get 'refresh_results', to: 'pages#refresh_results'
+  get 'new_bracket', to: 'pages#new_bracket'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -12,6 +12,10 @@ class PagesController < ApplicationController
     respond_with(@games, @regions, @years)
   end
 
+  def new_bracket
+    
+  end
+
   def results
     set_global_year
 
